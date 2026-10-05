@@ -1,0 +1,26 @@
+Unsent clarification request for upstream maintainers
+
+Subject: Clarification of licence terms for a modified research integration
+
+Hello,
+
+I am preparing a Unity–ROS search-and-rescue simulation research repository
+that integrates your software. I would like to preserve attribution and comply
+with the applicable licence before sharing modified integration files or patches.
+
+I found BSD entries in package metadata, but could not establish the specific
+BSD licence text for all files I use. Could you confirm the applicable licence
+and which copyright notices and conditions should accompany modifications?
+
+For FAR, the comparison baseline is commit
+2799b6964c141cacd1c32a14b19bc7abffbe0e52 on melodic-noetic.
+For the exploration environment fork, the local base is commit
+bf0cba71365271ebff09831a05afd78578150300.
+Please tailor this paragraph to the repository receiving the request.
+
+Thank you for your work and guidance.
+
+This is a draft only. No issue, email or other message has been sent.
+The GitHub root licence API returned 404 for both inspected repositories.
+That response alone does not establish the absence of all licensing permissions;
+package metadata, file-level notices and maintainer clarification still matter.
