@@ -1,0 +1,26 @@
+Recording setup status — 2026-10-05
+
+UPDATE: OBS Studio 32.2.2 installed successfully from the official GitHub release
+using GitHub CLI download after the winget download stalled. Asset size 159809104
+bytes; SHA-256 c3a0b880adbe64dc4bcb68f93016916ab5b55ae43fd227115287bf80257d92dc
+matched official release metadata. Authenticode status Valid, signer OBS Project,
+LLC. Installer exited with code 0; executable reports version 32.2.2 at
+C:\Program Files\obs-studio\bin\64bit\obs64.exe.
+OBS scene setup, GUI capture validation and video recording remain pending.
+The following paragraphs describe the earlier unsuccessful winget attempt.
+
+WSL exposes DISPLAY=:0 and WAYLAND_DISPLAY=wayland-0. This indicates display
+configuration, not proof of successful RViz capture. Windows reports a 2560x1600
+desktop and integrated/discrete GPUs. No recorder was found in the prior checks.
+
+Attempted installation through winget source winget, package OBSProject.OBSStudio.
+The installer download stayed at a zero-byte temporary file across repeated
+checks; no installer process started. The task-owned winget process was stopped.
+OBS is not installed at its standard path. No video was recorded.
+
+Next: complete recorder installation from the official publisher, then create
+window-specific captures rather than capturing the entire desktop. Exclude
+credentials, personal notifications and unrelated applications. Use actual ROS
+image output for the robot-view panel. First record a short quality/performance
+test before rerunning the full demonstration. Do not change the sensor settings
+to improve recording appearance.
