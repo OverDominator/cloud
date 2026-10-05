@@ -1,0 +1,22 @@
+Formal launcher runtime check — 2026-10-05
+
+Executed Tools/ROS/start_release_nav.sh using the unified isolated workspace
+/tmp/fire-unified-release-check/devel/setup.bash for both setup variables.
+FIRE_RUN_DIR=/tmp/fire-formal-launch-test-20261005
+QT_QPA_PLATFORM=offscreen for this node-liveness test, not video capture.
+
+PASS: the launcher created its fire_nav tmux session and registered 22 ROS nodes
+including rosout. Ten selected critical nodes each replied to rosnode ping:
+unity_endpoint, far_planner, localPlanner, pathFollower, stateEstimationAligner,
+local_wall_recovery_controller (normal adapter), navigation_safety_guard,
+victim_mission_manager, victim_pointcloud_localizer, experiment_data_logger.
+
+PASS: runtime parameter /experiment_data_logger/experiment_output_directory
+resolved to /tmp/fire-formal-launch-test-20261005/recordings.
+The test closed only its fire_nav session; subsequent checks found no remaining
+ROS processes or tmux server. Unity was not opened; no robot task was executed.
+
+This verifies actual launcher startup and node liveness, not a second completed
+rescue run. The previous full rescue validation used a separate harness. RViz
+was not visually checked in this test. A graphics-enabled recording run remains
+pending, as does installation validation on a fresh machine.
