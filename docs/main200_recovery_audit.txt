@@ -1,0 +1,37 @@
+Main-200 policy audit, 2026-10-05
+
+Scope: release candidate only; original project and archival snapshots unchanged.
+
+All 200 summary rows report zero recovery_attempts. Parsed event recovery_state
+values are exclusively normal: 38391, 29740, 386358 and 237699 event rows in
+the Original 10/10/80 and Easy 100 batches respectively. Event sampling alone
+does not prove that every possible internal transition was observed.
+
+The staged YAML disables active recovery and wall following. The control()
+inactive branch preserves command freshness, mission-active and odometry checks,
+normal speed/turn limits, then publishes to the downstream safety guard.
+Wall-follow, backing, trace-back and spin-escape recovery implementations still
+exist in the shared module. They have NOT been fully removed by this change.
+The constructor now defaults to inactive and rejects explicit active recovery;
+the main launch explicitly sets both flags false after loading YAML.
+
+The mission-manager navigation-test timeout was restored from the current
+parameterised expression to the 120-second expression in the archived main
+trial sources. This does not alter the main 600-second experiment limit.
+
+Do not remove all negative-velocity handling: passing a planner-requested
+reverse velocity or checking a reverse swept footprint is not the same as
+initiating heuristic backing recovery. Likewise mission-level failed-goal
+memory and goal reselection belong to the evaluated workflow.
+
+Remaining work before claiming an exact main-200-only release:
+- Extract the normal command adapter from the shared recovery module and
+  regression-test its output and callbacks before deleting dormant methods.
+- Reconcile unarchived ROS components and external dependencies; the available
+  main-trial source snapshots are partial.
+- Remove or separately package supplemental scene/test assets and demonstration
+  extensions; this candidate still includes them and the selected 30 results.
+- Run isolated ROS/Unity smoke tests. Static checks are not runtime validation.
+
+These edits restrict activation but do not certify a byte-identical historical
+environment. release_file_manifest.csv must be regenerated after each edit.

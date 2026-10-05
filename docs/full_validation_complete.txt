@@ -1,0 +1,28 @@
+Full-loop validation completed — 2026-10-05
+
+Independent verification-copy Easy scene, current isolated ROS builds.
+Trial ID: 20261005_161639. Main-200 historical results were not modified.
+Mission terminal state: COMPLETE; all 4 simulated victims rescued.
+Logger TRIAL_END: mission_complete at elapsed 205.580 seconds.
+Final recorded trajectory path length: approximately 131.574 m.
+Monitor observed COMPLETE at 210.16 seconds after first odometry, due to its
+10-second polling interval. Use logger timing for this run, not polling time.
+Saved JSON counts: 4178 odometry callbacks, 4931 command callbacks, 3550 nonzero
+commands. Console counts were one higher as callbacks continued during reporting.
+All five launch processes were alive at the terminal-state check.
+Harness shut down ROS and signalled Unity to exit; process checks found neither
+remaining ROS processes nor the validation Unity process.
+
+Evidence archived outside the release candidate:
+../validation_evidence_20261005_complete/
+Includes runtime logs/result.json, trial events/trajectory, and Unity log.
+The Linux roslogs/latest convenience symlink could not be copied to Windows;
+the underlying timestamped log directory was copied instead.
+
+This demonstrates one successful end-to-end run of the current release-related
+sources in the existing machine environment. It is NOT a clean-machine install
+test, a repeated reliability study, or proof of exact historical main-200 identity.
+Graphics ran in Unity batch mode; no demonstration video was recorded.
+Known startup/shutdown warnings from previous checks still require review.
+Next: consolidate portable setup and dependency distribution, review licences,
+and record a clearly identified live demonstration with observer/RViz views.

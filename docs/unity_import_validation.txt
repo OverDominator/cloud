@@ -1,0 +1,20 @@
+Unity isolated import validation — 2026-10-05
+
+Copied the release unity directory into sibling unity_validation_20261005.
+Opened only this verification copy with Unity 6000.0.75f1, matching ProjectVersion.
+Arguments: -batchmode -nographics -quit -projectPath <verification copy>
+
+The editor completed batch mode with reported return code 0.
+The log contains no "error CS" C# compiler errors.
+Log: ../unity_validation_20261005/validation.log (relative to release root).
+Generated Library and imported assets remain in the verification copy, outside
+the release candidate. Original Unity project and release assets were not edited.
+
+Warnings include unsupported/missing shader dependencies in the headless
+graphics context, and a curl callback-aborted message at shutdown. A successful
+headless import is not proof that rendered camera images are correct.
+
+No Play mode or ROS navigation process was started. Next runtime validation
+must use graphics-enabled rendering for the RGB/depth workflow, isolated ROS
+configuration, and separate logging destinations. Do not add smoke-test output
+to the main-200 results or claim historical reproduction from this import check.

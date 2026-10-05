@@ -1,0 +1,4 @@
+# Optional dense victim-depth backend. The ROS node keeps its LiDAR-only
+# fallback when these packages or the model weights are unavailable.
+transformers>=4.43,<5
+safetensors>=0.4

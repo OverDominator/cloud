@@ -1,0 +1,23 @@
+Supplemental executable cleanup — 2026-10-05
+
+Scope: local release candidate only. Original working project unchanged.
+
+Moved 20 files to sibling directory excluded_supplemental_code_20261005:
+six RecoveryTest scenes and their metadata; RecoveryTestSceneBuilder,
+TargetedPilotBridge and RecoveryTestTarget with metadata; recovery_goal_to_far.py;
+targeted_navigation_protocol_v1.txt. The archive includes a SHA-256 move manifest.
+Removed the relay node from system_unity_fire.launch and its CMake install entry.
+
+SampleScene remains a source asset required by SimplifiedFireSceneBuilder.
+Supplementary result CSVs remain as historical data, not executable test logic.
+Partial historical main-200 snapshots remain unchanged.
+
+Validation: Python AST, package JSON, references to omitted local Unity assets,
+and CMake Python installation paths passed. Normal command adapter checks passed,
+including 1050 command-output comparisons against the local legacy controller's
+inactive-recovery branch. No Unity/ROS runtime integration test was performed.
+
+Remaining limitation: this is not yet an exact historical reproduction bundle.
+External ROS dependencies and current code must still be reconciled with archived
+main-200 evidence. Runtime compatibility names and recording fields do not by
+themselves indicate active recovery algorithms and were not blindly removed.

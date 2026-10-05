@@ -1,0 +1,22 @@
+Launch closure validation — 2026-10-05
+
+PASS: joy, ps3joy, ros_tcp_endpoint and the release fire_perception package
+configured/built in /tmp/fire-launch-check-DuYObD, using only system ROS Noetic
+as the build underlay. Dependency sources came from the local snapshot.
+Build log: /tmp/fire-launch-check-DuYObD/build.log
+
+PASS: roslaunch --nodes parsed system_unity_fire.launch, far_unity_fire.launch,
+fire_color_detector.launch and ros_tcp_endpoint/endpoint.launch.
+PASS: all 21 node executable lookups resolved to isolated build/source paths
+or /opt/ros/noetic. No original runtime workspace was used in these lookups.
+CMU core: /tmp/fire-cmu-build-Fld1m1
+FAR: /tmp/fire-far-build-T1G3tV
+
+The previous missing ps3joy package is supplied by snapshot joystick_drivers
+sources, together with joy. Its launch also requires system diagnostic_aggregator.
+It specifies /dev/input/js0; availability of a physical joystick was not tested.
+
+These checks do not start nodes, prove imports/shared-library loading, establish
+network connectivity, or test Unity. They also do not validate a clean-machine
+installation. Runtime launch closure is now statically checked; end-to-end
+simulation remains pending. No experiments or original files were modified.

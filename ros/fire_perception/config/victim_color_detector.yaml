@@ -1,0 +1,195 @@
+image_topic: /thermal/image_raw
+detected_topic: /victim_detection/detected
+count_topic: /victim_detection/count
+centers_topic: /victim_detection/centers
+boxes_topic: /victim_detection/boxes
+boxes_stamped_topic: /victim_detection/boxes_stamped
+debug_image_topic: /victim_detection/debug_image
+mask_topic: /victim_detection/mask
+
+# Victim_Yellow material: RGB (255, 220, 0).
+yellow_low: [20, 100, 80]
+yellow_high: [38, 255, 255]
+min_area_pixels: 16.0
+horizontal_fov_degrees: 91.5
+visual_bearing_topic: /victim_detection/visual_bearing
+morphology_kernel: 3
+morphology_iterations: 1
+merge_gap_pixels: 18
+publish_mask: true
+
+# Camera/LiDAR fusion.
+pointcloud_topic: /registered_scan
+camera_frame: thermal_camera_link
+output_frame: map
+image_width: 320
+image_height: 180
+vertical_fov_degrees: 60.0
+observation_timeout: 1.6
+box_margin_pixels: 3
+min_range: 0.4
+max_range: 16.0
+front_surface_depth_band: 0.8
+min_lidar_points: 2
+victim_marker_scale: 0.5
+
+# Dense monocular depth + sparse LiDAR metric calibration. The small model is
+# used because WSL is capped at 6 GB; inference only runs while yellow is seen.
+use_depth_anything: true
+depth_model_name: depth-anything/Depth-Anything-V2-Small-hf
+# Set this to a downloaded model directory for fully offline startup.
+depth_model_path: ""
+# The model is pre-cached; avoid a blocked Hugging Face network check at launch.
+depth_local_files_only: true
+depth_device: auto
+depth_inference_rate: 0.4
+depth_cpu_threads: 2
+# Multiples of the model's 14-pixel patch size, close to the 16:9 camera ratio.
+depth_input_width: 294
+depth_input_height: 168
+depth_cache_max_age: 2.4
+# Run once when yellow first appears; allow one retry only if LiDAR calibration
+# is insufficient. A one-second absence starts a new visual episode.
+depth_event_triggered: true
+depth_episode_reset_seconds: 1.0
+depth_max_inferences_per_episode: 2
+depth_min_anchor_points: 24
+depth_max_fit_error: 1.5
+depth_direct_lidar_weight: 0.65
+relative_depth_topic: /victim_detection/relative_depth
+depth_fusion_status_topic: /victim_detection/depth_status
+
+# Nearest-victim mission management.
+mission_auto_start: true
+mission_total_victims: 5
+# Zero disables the overall rescue mission deadline; safety watchdogs stay on.
+mission_max_duration_seconds: 0.0
+victim_confirmation_count: 3
+victim_track_merge_distance: 3.0
+victim_track_update_alpha: 0.2
+unconfirmed_track_timeout: 5.0
+rescue_distance: 3.0
+# Suppress trace-back/wall-follow slightly outside the actual rescue radius.
+victim_recovery_inhibit_distance: 3.6
+victim_navigation_standoff_distance: 2.7
+victim_standoff_retry_timeout: 18.0
+victim_standoff_progress_distance: 0.5
+victim_standoff_angle_offsets_degrees: [0, 60, -60, 120, -120, 180]
+victim_standoff_obstacle_topic: /FAR_obs_debug
+victim_standoff_obstacle_clearance: 2.2
+victim_standoff_zero_command_timeout: 5.0
+victim_standoff_defer_seconds: 75.0
+rescued_suppression_distance: 4.0
+rescue_hold_seconds: 2.0
+victim_precise_target_range: 16.0
+contact_rescue_distance: 3.0
+contact_rescue_hold_seconds: 1.0
+# Final automatic rescue is authoritative only when Unity's trigger volume is
+# occupied. Map/depth and acoustic distances remain guidance signals.
+enable_legacy_distance_rescue: false
+goal_republish_distance: 0.5
+goal_republish_interval: 3.0
+mission_vehicle_height: 0.75
+victim_call_topic: /victim_call/bearing
+victim_call_detected_topic: /victim_call/detected
+victim_call_strength_topic: /victim_call/strength
+victim_call_precise_position_topic: /victim_call/estimated_position
+victim_call_remaining_topic: /victim_call/remaining
+victim_call_total_topic: /victim_call/total
+victim_in_rescue_range_topic: /victim_call/in_rescue_range
+victim_call_timeout: 1.0
+victim_call_goal_distance: 12.0
+victim_call_goal_interval: 2.0
+victim_call_goal_change_distance: 0.15
+# A simulated acoustic estimate is intentionally noisy.  Limit how often it
+# can replace FAR's active route; visual tracks provide the fine approach.
+victim_acoustic_goal_update_distance: 2.5
+victim_acoustic_goal_update_interval: 6.0
+victim_call_hearing_distance: 35.0
+victim_call_standoff_distance: 1.2
+victim_call_turn_gain: 1.0
+victim_call_max_turn_rate: 0.8
+victim_call_heading_tolerance_degrees: 8.0
+victim_call_min_goal_distance: 5.0
+victim_visual_bearing_topic: /victim_detection/visual_bearing
+victim_visual_timeout: 2.6
+victim_visual_lost_grace_seconds: 5.0
+victim_visual_max_observation_age: 2.6
+victim_visual_confirmation_count: 2
+victim_visual_goal_distance: 6.0
+victim_visual_goal_interval: 0.8
+victim_visual_heading_tolerance_degrees: 10.0
+victim_visual_acoustic_handoff_distance: 3.5
+victim_visual_rescued_suppression_timeout: 3.0
+wall_bypass_stuck_timeout: 7.0
+# Do not create exploration goals that deliberately travel along a wall.
+enable_wall_bypass: false
+wall_bypass_progress_distance: 0.4
+wall_bypass_distance: 8.0
+wall_bypass_forward_bias: 2.0
+wall_bypass_duration: 20.0
+wall_bypass_arrival_distance: 2.0
+wall_bypass_republish_interval: 5.0
+wall_bypass_side_lock_duration: 60.0
+wall_block_replan_delay: 2.0
+wall_block_replan_cooldown: 5.0
+local_recovery_active_topic: /local_recovery/active
+
+# Exploration memory and FAR V-Graph waypoint selection.
+use_topological_exploration: true
+topology_topic: /viz_graph_topic
+exploration_goal_arrival_distance: 2.0
+exploration_visit_spacing: 3.5
+exploration_visited_radius: 8.0
+exploration_node_min_distance: 4.0
+exploration_node_max_distance: 28.0
+exploration_min_direction_alignment: -0.2
+exploration_direction_weight: 0.8
+exploration_novelty_weight: 2.8
+exploration_distance_weight: 0.06
+exploration_history_limit: 600
+exploration_failed_goal_radius: 5.5
+exploration_failed_goal_limit: 100
+exploration_failed_goal_cooldown: 90.0
+# When the final motion guard continuously vetoes a FAR exploration route for
+# fire, reject that endpoint and immediately select another topology node.
+navigation_guard_reason_topic: /navigation_safety/guard_reason
+fire_block_replan_delay: 1.2
+fire_block_replan_cooldown: 4.0
+exploration_failed_pocket_radius: 3.5
+exploration_failed_pocket_merge_distance: 1.5
+exploration_failed_pocket_cooldown: 1800.0
+exploration_coverage_cell_size: 4.0
+exploration_coverage_observation_radius: 7.0
+exploration_coverage_gain_radius: 12.0
+exploration_coverage_gain_weight: 6.0
+exploration_region_cooldown: 100.0
+exploration_recent_region_penalty: 5.0
+exploration_coverage_stall_timeout: 18.0
+exploration_loop_detection_window: 20.0
+exploration_loop_min_duration: 8.0
+exploration_loop_min_path_length: 8.0
+exploration_loop_closure_radius: 2.2
+exploration_loop_detection_cooldown: 30.0
+
+# FireRescue_Complex is 160 x 130 m. Keep temporary acoustic detours 6 m
+# inside its outer walls; this remains intentionally more conservative than
+# the scale-1 vehicle footprint used by the simple-scene navigation launch.
+# Unity X maps to negative ROS Y; Unity Z maps to ROS X.  The complex
+# scene is 160 m (Unity X) by 130 m (Unity Z), with a 6 m safety margin.
+mission_map_min_x: -59.0
+mission_map_max_x: 59.0
+mission_map_min_y: -74.0
+mission_map_max_y: 74.0
+
+# Experiment recording. The global /experiment_map_name parameter may
+# override this label before each run without changing the launch file.
+experiment_output_directory: /root/fire_nav_experiments
+# Geometry revision: widened divider opening and recessed cross-wall.
+experiment_map_name: simple_v5_acoustic_relay
+experiment_sample_interval: 0.2
+experiment_max_position_jump: 5.0
+experiment_auto_record: true
+# Zero disables the experiment recording deadline.
+experiment_max_duration_seconds: 600.0
+experiment_keep_failed: true

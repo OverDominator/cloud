@@ -1,0 +1,30 @@
+Unity–ROS communication smoke test, 2026-10-05
+
+Executed Unity Play mode in the isolated validation copy with graphics enabled.
+Only roscore and the isolated ROS-TCP-Endpoint were started. No navigation,
+mission manager, perception detector or velocity command publisher was started.
+Unity was bounded by a 45-second editor deadline; ROS observed for 90 seconds.
+
+Observed ROS subscriber callback counts:
+/odom: 802
+/registered_scan: 245
+/thermal/image_raw: 123
+/velodyne_points: no messages received by this test subscriber.
+Counts are aggregate receipt counts, not measured steady-state publication rates.
+The image topic name is not evidence of physical thermal sensing.
+
+Unity log includes an /odom queue-full warning. Investigate throughput and
+steady-state behaviour during full-stack testing; this run does not establish
+lossless transport. A thread-abort connection message appeared during shutdown.
+
+Unity completed its timed test and exited. The test harness stopped its own
+ROS master/endpoint process groups. No experimental summary CSV was produced.
+Original project and main-200 records were untouched.
+
+Evidence:
+Validation copy communication_smoke.log
+WSL /tmp/fire-communication-smoke-20261005/received_counts.json
+WSL /tmp/fire-communication-smoke-20261005/endpoint.log and roslogs/
+
+This establishes one-way Unity sensor message receipt by ROS. ROS-to-Unity
+motion, full navigation, rescue completion, and recorded video remain untested.

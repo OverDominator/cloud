@@ -1,0 +1,26 @@
+Isolated ROS-to-Unity motion smoke test — 2026-10-05
+
+Ran the verification-copy Easy scene in Unity Play mode with graphics enabled.
+Started only an isolated ROS master, TCP endpoint and test command publisher.
+No navigation stack, mission manager or perception inference was started.
+The test published TwistStamped on /cmd_vel: zero commands to settle, 0.2 m/s
+for approximately one wall-clock second, then zero commands for three seconds.
+Telemetry freshness was checked while sending the nonzero command; cleanup
+also attempted zero commands before closing the endpoint.
+
+Observed 120 odometry callbacks by the end of measurement.
+Planar displacement over command plus stopping interval: 0.184147964 m.
+Planar change during the final measured second: 0.000514348 m.
+This supports basic command delivery, physical movement and a near-stationary
+stop response in this single test. It is not a controller-accuracy benchmark,
+collision-avoidance test or complete rescue run.
+
+Evidence: /tmp/fire-motion-smoke-20261005/result.json and ROS logs;
+verification-copy motion_smoke.log. No queue-full or exception matches appeared
+in the inspected Unity test log. This does not establish lossless transport.
+Unity exited on its timer; the harness shut down its own ROS process groups.
+No main-200 data or original project files were changed.
+
+Next: full-stack runtime checks, separate logs, actual rescue completion,
+and graphics-enabled video capture. The current release is not yet certified
+as an end-to-end reproducer or an exact historical main-200 environment.

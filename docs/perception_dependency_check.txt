@@ -1,0 +1,28 @@
+Offline perception dependency check — 2026-10-05
+
+The existing WSL Python environment exposes rospy, cv_bridge, cv2, numpy 1.17.4,
+torch 2.4.1+cpu and transformers 4.46.3. These are observed installed versions,
+not a validated fresh-install requirements lockfile.
+
+Configuration selects depth-anything/Depth-Anything-V2-Small-hf, with an empty
+depth_model_path and depth_local_files_only=true. It therefore depends on an
+existing model cache. Current local snapshot identifier:
+5426e4f0f36572d16453bbda7a8389317b1bef99
+Its config.json, preprocessor_config.json and model.safetensors exist in WSL.
+This identifies current cache contents, not the historical experiment revision.
+
+IMPORTANT: victim_pointcloud_localizer catches model loading errors and continues
+with LiDAR-only localization. A running node does not prove depth fusion is active.
+Before a reproduction run, confirm the depth_anything_ready status and not merely
+successful startup. Missing model weights can change the effective perception
+pipeline. No behaviour or archived configuration was modified by this check.
+
+New helper: Tools/ROS/check_perception_dependencies.py
+Run under the intended ROS Python environment, optionally supplying --model-dir
+with a downloaded model directory. The check neither downloads weights nor starts
+ROS nodes. It checks module discovery and model file presence only; actual imports,
+weight integrity, model loading and inference remain untested.
+
+For another machine, prepare model files separately and set depth_model_path in
+a user-owned copy of victim_color_detector.yaml; pass that file through the
+victim_config launch argument. Model redistribution/licensing is not cleared here.

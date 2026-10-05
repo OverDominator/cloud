@@ -1,0 +1,25 @@
+Portable entrypoint (2026-10-05)
+
+New script: Tools/ROS/start_release_nav.sh
+The old start_fire_nav.sh and shortcut helpers remain machine-specific legacy
+tools. Use the new entrypoint for release installation work.
+
+Before use, build the release ROS package and the modified external dependencies.
+Point FIRE_ROS_SETUP and FIRE_CMU_SETUP to their setup.bash files, for example:
+
+FIRE_ROS_SETUP=/path/to/ros_ws/devel/setup.bash \
+FIRE_CMU_SETUP=/path/to/cmu_ws/devel/setup.bash \
+bash Tools/ROS/start_release_nav.sh --check
+
+--check only checks package discovery and the custom Unity launch file; it does
+not start ROS processes or prove runtime readiness. Run without --check only
+when ready to start the system. Session name remains fire_nav, matching the
+existing stop helper and preventing a duplicate session with the old launcher.
+
+system_unity_fire.launch now resolves the custom launch via vehicle_simulator
+package lookup; unity_stack_launch can override the path. The unmodified upstream
+vehicle_simulator package does not necessarily contain this custom file.
+
+Validation: bash syntax and existing static release checks passed. The new script
+has not been used to start the system; no end-to-end test is claimed. Other legacy
+scripts and model configuration still require portability review.

@@ -1,0 +1,26 @@
+Full-stack short smoke test — 2026-10-05
+
+Started isolated master, TCP endpoint, CMU core, FAR and perception/mission
+launches, then Unity verification-copy Easy scene. ROS monitoring was bounded
+to 90 seconds; the existing Unity helper used a 45-second deadline. Startup
+latency meant the experiment logger recorded only about 28 seconds.
+
+Observed: 1800 cmd_vel callbacks, 453 nonzero commands, 555 odometry callbacks.
+First planar pose approximately (-25.000, 32.000); last (-6.296, 28.632).
+Independent logger reported 19.43 m travelled; success=False on forced test stop.
+This is evidence of autonomous motion through the integrated command chain,
+NOT a completed rescue, failure-rate trial, or historical reproduction result.
+
+Logs: /tmp/fire-full-smoke-20261005/
+Separate recording: /tmp/fire-release-validation-20261005/recordings/
+Unity log: verification-copy full_stack_smoke.log.
+Layout metadata overwrote the configured map label with easy_v1_acoustic_relay;
+isolation is provided by the recording directory, not the map label.
+The reused Unity helper's 'no navigation stack requested' log message refers
+to that helper only and is misleading for this run: this run DID start navigation.
+
+Issues to review: missing physical /dev/input/js0 warning; stale odometry safety
+stops before Unity startup; publish-to-closed-topic exception during shutdown.
+Do not infer active depth fusion or completed rescue from this smoke test.
+Next run needs readiness-based timing and terminal-state monitoring.
+All harness ROS processes and Unity exited after the bounded test.

@@ -1,0 +1,32 @@
+External dependency checks, 2026-10-05
+
+PASS: Depth Anything V2 local CPU loading and one synthetic-image inference.
+HF_HUB_OFFLINE=1 and TRANSFORMERS_OFFLINE=1; local_files_only=True.
+Snapshot: 5426e4f0f36572d16453bbda7a8389317b1bef99.
+Input: synthetic RGB gradient, 168 x 294. Finite output of shape 168 x 294.
+Model loading plus inference measured 1.139 seconds in this single smoke test;
+this is not a performance benchmark or a localization-accuracy result.
+
+PASS: all six packages in the copied FAR source tree compiled in isolation.
+Workspace: /tmp/fire-far-build-T1G3tV
+Command: catkin_make -j2 -l2 -DPYTHON_EXECUTABLE=/usr/bin/python3
+
+PASS: five copied CMU core packages compiled in isolation: local_planner,
+terrain_analysis, terrain_analysis_ext, sensor_scan_generation, vehicle_simulator.
+Includes successful stateEstimationAligner compilation and linking.
+Workspace: /tmp/fire-cmu-build-Fld1m1
+Command: catkin_make -j1 -l1 -DPYTHON_EXECUTABLE=/usr/bin/python3
+
+Both workspaces sourced only /opt/ros/noetic/setup.bash, not original project
+overlays. Source came from the local dependency snapshot. Build logs are at
+each workspace's build.log. CMake reported missing optional VTK utility paths;
+these warnings did not prevent either build from completing.
+
+Outstanding runtime dependency: system_unity.launch includes ps3joy/ps3.launch.
+ps3joy is not discoverable from the system ROS environment alone. The dependency
+snapshot has joystick_drivers sources, but these were not part of this core
+compile check. Full launch closure still needs checking, including this package
+and ROS-TCP-Endpoint. No navigation nodes or Unity experiments were started.
+
+These results do not prove historical main-200 identity or end-to-end runtime
+correctness. No generated test output was added to experimental result CSVs.

@@ -1,0 +1,11 @@
+"trial_id","map_name","start_time","end_time","duration_s","path_length_m","total_victims","rescued_victims","remaining_victims","mission_success","recovery_attempts","collision_count","min_fire_distance_m","final_status","stationary_time_s","recovery_time_s","recovery_transitions"
+"20260927_092604","simple_v5_acoustic_relay","2026-09-27T09:26:04","2026-09-27T09:30:17","253.065","152.224","4","4","0","True","0","0","12.841","mission complete: all simulated victims rescued (mission_complete)","4.274","0.000","0"
+"20260927_094239","simple_v5_acoustic_relay","2026-09-27T09:42:39","2026-09-27T09:45:22","163.659","114.204","4","4","0","True","0","0","6.264","mission complete: all simulated victims rescued (mission_complete)","2.352","0.000","0"
+"20260927_094601","simple_v5_acoustic_relay","2026-09-27T09:46:01","2026-09-27T09:56:01","600.147","154.455","4","3","1","False","0","0","12.722","experiment timeout (timeout)","14.324","0.000","0"
+20260927_122053,simple_v5_acoustic_relay,2026-09-27T12:20:53,2026-09-27T12:30:54,600.649,239.329,4,3,1,False,0,0,11.782,experiment timeout (timeout),11.115,0.000,0
+20260927_123145,simple_v5_acoustic_relay,2026-09-27T12:31:45,2026-09-27T12:35:38,232.931,146.610,4,4,0,True,0,0,4.611,mission complete: all simulated victims rescued (mission_complete),11.776,0.000,0
+20260927_123630,simple_v5_acoustic_relay,2026-09-27T12:36:30,2026-09-27T12:46:30,600.607,265.676,4,3,1,False,0,0,12.680,experiment timeout (timeout),18.466,0.000,0
+20260927_124724,simple_v5_acoustic_relay,2026-09-27T12:47:24,2026-09-27T12:50:28,183.104,107.736,4,4,0,True,0,0,13.455,mission complete: all simulated victims rescued (mission_complete),11.958,0.000,0
+20260927_125110,simple_v5_acoustic_relay,2026-09-27T12:51:10,2026-09-27T13:01:11,600.359,247.392,4,3,1,False,0,0,12.646,experiment timeout (timeout),15.960,0.000,0
+20260927_130154,simple_v5_acoustic_relay,2026-09-27T13:01:54,2026-09-27T13:06:48,294.609,151.300,4,4,0,True,0,0,4.607,mission complete: all simulated victims rescued (mission_complete),18.318,0.000,0
+20260927_130741,simple_v5_acoustic_relay,2026-09-27T13:07:41,2026-09-27T13:10:16,155.515,113.512,4,4,0,True,0,0,5.262,mission complete: all simulated victims rescued (mission_complete),2.037,0.000,0

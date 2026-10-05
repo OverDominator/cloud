@@ -1,0 +1,56 @@
+<launch>
+  <arg name="unity_stack_launch" default="$(find vehicle_simulator)/launch/system_unity.launch" />
+  <arg name="autonomySpeed" default="1.9" />
+  <!-- FireRescue_Simplified uses a scale-1 TrackedRobot.  Its compound
+       collider is about 1.23 m long by 1.60 m wide; these slightly larger
+       values include the wheel envelope without reviving the old scale-2
+       footprint. -->
+  <arg name="vehicleLength" default="1.35" />
+  <arg name="vehicleWidth" default="1.80" />
+  <arg name="safetyMargin" default="0.30" />
+
+  <!-- Ground CMU stack with a footprint matching the scaled Unity robot. -->
+  <include file="$(arg unity_stack_launch)">
+    <arg name="autonomySpeed" value="$(arg autonomySpeed)" />
+    <!-- Keep the planner command separate from the recovery arbiter output.
+         Sharing /cmd_vel_raw made the recovery node subscribe to its own
+         publications and allowed two publishers to overwrite each other. -->
+    <arg name="cmdVelTopic" value="/cmd_vel_planner" />
+  </include>
+
+  <!-- Normal-only FAR adapter; legacy node name preserves private parameters.
+       The downstream safety guard retains obstacle veto authority. -->
+  <node pkg="fire_perception" type="far_command_adapter.py"
+        name="local_wall_recovery_controller" output="screen" required="true">
+    <!-- Speed limits are private parameters. -->
+    <rosparam command="load"
+              file="$(find fire_perception)/config/far_command_adapter.yaml" />
+    <param name="enable_active_recovery" value="false" />
+    <param name="raw_command_topic" value="/cmd_vel_planner" />
+    <param name="output_command_topic" value="/cmd_vel_raw" />
+    <param name="vehicle_length" value="$(arg vehicleLength)" />
+    <param name="vehicle_width" value="$(arg vehicleWidth)" />
+    <param name="safety_margin" value="$(arg safetyMargin)" />
+  </node>
+
+  <!-- Independent safety veto. -->
+  <node pkg="fire_perception" type="navigation_safety_guard.py"
+        name="navigation_safety_guard" output="screen" required="true">
+    <!-- Keep the final veto geometry identical to the local planner. -->
+    <param name="vehicle_length" value="$(arg vehicleLength)" />
+    <param name="vehicle_width" value="$(arg vehicleWidth)" />
+    <param name="safety_margin" value="$(arg safetyMargin)" />
+    <!-- A maximum-rate FAR pivot can fail the rectangular swept-footprint
+         check beside a wall although a slower, re-evaluated pivot is safe. -->
+    <param name="motion_check_horizon" value="0.6" />
+    <param name="scan_timeout" value="1.8" />
+    <param name="in_place_linear_threshold" value="0.08" />
+    <rosparam param="safe_turn_retry_speeds">[0.55, 0.40, 0.25, 0.15]</rosparam>
+  </node>
+
+  <param name="/localPlanner/vehicleLength" type="double" value="$(arg vehicleLength)" />
+  <param name="/localPlanner/vehicleWidth" type="double" value="$(arg vehicleWidth)" />
+  <param name="/localPlanner/checkRotObstacle" type="bool" value="true" />
+  <param name="/localPlanner/adjacentRange" type="double" value="8.0" />
+  <param name="/localPlanner/goalClearRange" type="double" value="3.0" />
+</launch>

@@ -1,0 +1,43 @@
+# Unity generated files
+unity/[Ll]ibrary/
+unity/[Tt]emp/
+unity/[Oo]bj/
+unity/[Ll]ogs/
+unity/[Uu]ser[Ss]ettings/
+unity/[Bb]uild/
+unity/[Bb]uilds/
+unity/MemoryCaptures/
+unity/Recordings/
+unity/ExperimentResults/
+unity/*.csproj
+unity/*.sln*
+# ROS and Python build outputs
+build/
+devel/
+install/
+log/
+__pycache__/
+*.pyc
+.venv/
+# Secrets and machine configuration
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+.vscode/
+.idea/
+# Large runtime outputs and model weights
+*.bag
+*.bag.active
+*.pt
+*.pth
+*.safetensors
+*.mp4
+*.mov
+# Office and local review files
+~$*
+*.docx
+*.pptx
+.DS_Store
+Thumbs.db

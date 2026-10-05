@@ -1,0 +1,30 @@
+Demonstration recording plan
+
+Purpose: show what the robot is asked to do, the information it receives, the
+navigation decisions, and actual rescue completion in one identifiable run.
+
+Layout: Unity observer overview on the left, robot camera and RViz on the right.
+Observer overview must be labelled as an external observer, not robot knowledge.
+Robot image should come from the actual published image topic where practical;
+the current Main Camera preview is not automatically identical to that topic.
+RViz should show the robot, point cloud, current goal and route, not every debug
+marker. All three views must refer to the same live run.
+
+Sequence: explain scene and four-victim task; show exploration and guidance;
+show approach and at least one rescue confirmation; finish with COMPLETE and
+four rescued victims. Retain the uncut recording and matching logs. Mark any
+speed-up or editing. Manual control, if demonstrated, belongs in a separate clip.
+
+Observer tool currently exists only in the verification copy under
+Fire Rescue / Video / Observer overview. Its 10 fps preview is not a recorder.
+Do not claim a 30 fps source merely because an encoder outputs 30 fps.
+
+Preflight: confirm rendering, model-ready status, separate logs, sufficient disk,
+readable status labels, and recording performance. Avoid changing the robot's
+sensor rate/resolution or physics for visual appearance. Added observer rendering
+can still affect performance; check before presenting recorded-run timings.
+
+Recorder discovery: ffmpeg and obs64 were not found on PATH, and OBS was not
+found at C:\Program Files\obs-studio\bin\64bit\obs64.exe. This limited check
+does not prove they are absent elsewhere. No recorder was installed or started.
+Recording tool selection/setup and graphics-enabled RViz remain pending.

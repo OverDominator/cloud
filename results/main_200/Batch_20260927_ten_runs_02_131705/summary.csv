@@ -1,0 +1,11 @@
+trial_id,map_name,start_time,end_time,duration_s,path_length_m,total_victims,rescued_victims,remaining_victims,mission_success,recovery_attempts,collision_count,min_fire_distance_m,final_status,stationary_time_s,recovery_time_s,recovery_transitions
+20260927_131730,simple_v5_acoustic_relay,2026-09-27T13:17:30,2026-09-27T13:19:51,141.420,106.055,4,4,0,True,0,0,10.484,mission complete: all simulated victims rescued (mission_complete),0.701,0.000,0
+20260927_132040,simple_v5_acoustic_relay,2026-09-27T13:20:40,2026-09-27T13:30:41,600.929,213.183,4,3,1,False,0,0,12.318,experiment timeout (timeout),16.991,0.000,0
+20260927_133125,simple_v5_acoustic_relay,2026-09-27T13:31:25,2026-09-27T13:41:25,600.324,253.605,4,3,1,False,0,0,12.000,experiment timeout (timeout),10.528,0.000,0
+20260927_134204,simple_v5_acoustic_relay,2026-09-27T13:42:04,2026-09-27T13:46:59,294.548,170.351,4,4,0,True,0,0,4.592,mission complete: all simulated victims rescued (mission_complete),11.467,0.000,0
+20260927_134740,simple_v5_acoustic_relay,2026-09-27T13:47:40,2026-09-27T13:52:02,261.893,144.573,4,4,0,True,0,0,12.511,mission complete: all simulated victims rescued (mission_complete),7.890,0.000,0
+20260927_135243,simple_v5_acoustic_relay,2026-09-27T13:52:43,2026-09-27T13:56:48,244.865,144.867,4,4,0,True,0,0,11.464,mission complete: all simulated victims rescued (mission_complete),4.474,0.000,0
+20260927_135729,simple_v5_acoustic_relay,2026-09-27T13:57:29,2026-09-27T13:59:53,144.198,104.408,4,4,0,True,0,0,11.603,mission complete: all simulated victims rescued (mission_complete),1.852,0.000,0
+20260927_140044,simple_v5_acoustic_relay,2026-09-27T14:00:44,2026-09-27T14:05:25,281.564,140.601,4,4,0,True,0,0,12.809,mission complete: all simulated victims rescued (mission_complete),6.106,0.000,0
+20260927_140616,simple_v5_acoustic_relay,2026-09-27T14:06:16,2026-09-27T14:08:38,142.122,104.173,4,4,0,True,0,0,13.592,mission complete: all simulated victims rescued (mission_complete),1.023,0.000,0
+20260927_140928,simple_v5_acoustic_relay,2026-09-27T14:09:28,2026-09-27T14:12:42,193.385,119.036,4,4,0,True,0,0,8.074,mission complete: all simulated victims rescued (mission_complete),2.631,0.000,0

@@ -1,0 +1,38 @@
+Source and dependency audit — 2026-10-05
+
+Main-200 archive comparison
+Compared every Assets/Packages/ROS source snapshot in the reproducibility
+directories of the two 10-run Original batches, the 80-run Original batch,
+and the 100-run Easy batch against the release candidate.
+Every compared file is byte-identical except CmdVelSubscriber.cs, whose sole
+text difference is a Tooltip rewording removing the DWA example. No executable
+logic differs in that file. Both archived main scene files match exactly.
+This finding covers archived files only, not the entire runtime system.
+
+External dependencies inspected in WSL Ubuntu-20.04 (current local state)
+ROS-TCP-Endpoint HEAD: 993d366b8900bf9f3d2da444fde64c0379b4dc7c
+Autonomous exploration environment HEAD:
+bf0cba71365271ebff09831a05afd78578150300
+The latter has local tracked modifications and additional untracked source;
+HEAD alone does not specify its current runtime implementation.
+FAR source directories have no usable Git metadata, including the nested
+far_planner-melodic-noetic directory. Its upstream commit is not established.
+
+Required local environment changes observed
+- local_planner.launch: twoWayDrive default false; cmdVelTopic argument/remap;
+  stock static transform publishers commented out.
+- terrainAnalysis.cpp and its launch: separate noDataInitializationDis parameter.
+- vehicle_simulator/launch/system_unity.launch: custom Unity integration,
+  stateEstimationAligner node, command topic forwarding, terrain and scan nodes.
+- vehicle_simulator/src/stateEstimationAligner.cpp is additional local source;
+  related build configuration is modified.
+- Release FAR launch requests validate_waypoint_corridor and waypoint_clearance;
+  compatibility with an unmodified upstream FAR release is not established.
+
+Publication status
+These local dependencies have not been copied into the release or declared
+historically identical to the main-200 runtime. Before claiming reproduction,
+preserve their exact source/hashes and applicable licences, identify necessary
+patches, reconcile available historical evidence, and test a separate build.
+No original project or WSL runtime source was changed by this audit.
+No ROS processes or Unity experiments were started.

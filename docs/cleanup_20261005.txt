@@ -1,0 +1,24 @@
+Release candidate cleanup on 2026-10-05
+
+Scope: this local release candidate only. The original project was not edited.
+
+Removed test/test_inflation_path.sh and test/test_inflation_path.cpp from the
+staged ROS package. The shell test depended on excluded alternative-planner
+configuration files and no retained build or launch entry referenced it.
+Original copies remain available in the working project for recovery.
+
+Reworded comments in system_unity_fire.launch and far_move_base_bridge.py,
+and the inspector tooltip in CmdVelSubscriber.cs. No runtime logic changed.
+
+Historical source_snapshots remain byte-for-byte copies. Four archived
+CmdVelSubscriber snapshots retain a tooltip naming an alternative planner;
+this is not an active planner implementation or an experiment claim.
+
+copy_manifest.csv is the original copy-time provenance manifest. Two listed
+files have now been removed and three further files have comment-only edits;
+the earlier staged CMake change remains. Consult release_file_manifest.csv
+for the current candidate file hashes, excluding that manifest itself.
+
+Checks performed: Python syntax and staged asset-reference checks; current
+ROS/Unity source contains no remaining DWA name or DWA config references.
+No ROS build or Unity runtime test was performed.

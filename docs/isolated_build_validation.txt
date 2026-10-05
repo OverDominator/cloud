@@ -1,0 +1,28 @@
+Isolated release-package build — 2026-10-05
+
+PASS: catkin_make -j2 -l2 -DPYTHON_EXECUTABLE=/usr/bin/python3
+PASS: catkin_make install -j2 -l2
+
+Environment: existing WSL Ubuntu-20.04, ROS Noetic, GCC 9.4, Python 3.8.10.
+Workspace: /tmp/fire-release-build-2rBphD
+Source: copied release candidate ros/fire_perception, not the original workspace.
+CMAKE_PREFIX_PATH at configure time: /opt/ros/noetic only.
+Build log: /tmp/fire-release-build-2rBphD/build.log
+Installation stayed inside this temporary workspace; no system install was made.
+
+The far_marker_global_planner shared library compiled and linked successfully.
+Python node wrappers, launch/config files and plugin metadata installed.
+This validates package compilation and installation rules only. Python wrappers
+are not runtime import tests. Existing system dependencies were already present;
+this is not proof that setup works on a fresh operating-system installation.
+
+Remaining full-system requirements:
+- FAR and the modified exploration environment, including custom Unity launch
+  and stateEstimationAligner; build and runtime validation still pending.
+- ROS-TCP-Endpoint and Unity connector connectivity.
+- Perception Python modules and conditional depth-model resources.
+- Portable launch paths (current startup still references /root workspaces).
+- Unity project compilation and an isolated end-to-end simulation test.
+
+No roscore, navigation node or robot experiment was started during this check.
+Do not use this result as evidence of exact main-200 historical reproduction.

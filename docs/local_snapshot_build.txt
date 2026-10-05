@@ -1,0 +1,33 @@
+Local snapshot reconstruction
+
+Validation on 2026-10-05: a new /tmp/fire-unified-release-check workspace built
+all 15 packages successfully with this script, against system ROS Noetic only.
+The existing-destination rejection was also exercised successfully.
+
+Tools/ROS/build_local_snapshot.sh collects the 15 required local ROS packages
+into one new catkin workspace. It requires an existing ROS Noetic installation
+and the separately held dependency_snapshot_20261005 directory. It does not
+download dependencies or constitute a public-source installation procedure.
+
+Example from the release root in Linux/WSL:
+
+bash Tools/ROS/build_local_snapshot.sh /path/to/dependency_snapshot_20261005 /path/to/new_workspace --check
+bash Tools/ROS/build_local_snapshot.sh /path/to/dependency_snapshot_20261005 /path/to/new_workspace
+
+The destination must not already exist. Source folders are copied, not linked;
+the original runtime workspace is not modified. --check only checks source layout
+and destination constraints, not compilation or operating-system dependencies.
+Build errors leave the new directory in place for inspection; no automatic
+recursive cleanup or overwrite is performed.
+
+After a successful build, use the unified setup for both launcher variables:
+
+FIRE_ROS_SETUP=/path/to/new_workspace/devel/setup.bash \
+FIRE_CMU_SETUP=/path/to/new_workspace/devel/setup.bash \
+bash Tools/ROS/start_release_nav.sh --check
+
+Do not launch a second ROS master while another run is active. The normal launcher
+starts actual navigation when --check is omitted. Prepare logging destinations,
+model files and Unity configuration first. Its default log configuration still
+needs a user-owned override for a new machine. Licence review and distribution
+of exact dependency patches remain separate release requirements.

@@ -1,0 +1,31 @@
+Normal-only adapter refactor, 2026-10-05
+
+This update supersedes the dormant-controller status in main200_recovery_audit.txt.
+system_unity_fire.launch now starts far_command_adapter.py with its reduced
+far_command_adapter.yaml. The legacy node name and normal-status topics remain
+for compatibility with mission/logging subscribers. No active backing,
+wall-following, spin-escape or trace-back implementation exists in this adapter.
+
+The controller, recovery-only configuration, clearance probe, active-recovery
+tests and stale .pre_* backups were moved outside the release candidate into
+the sibling excluded_recovery_20261005 folder. The original working project
+was untouched. moved_files.csv in that folder lists recoverable files.
+The legacy regression suite mixes recovery tests with mission/perception tests;
+it and two dependent suites are archived rather than falsely claimed to pass
+against a removed controller. Standalone safety and footprint tests remain.
+
+Offline regression:
+- 1050 command-output cases agree with the original controller's inactive
+  branch using the current local original source as the reference.
+- Normal status publications, mission stop/restart and rejection of active
+  recovery configuration are checked with stubbed ROS transport.
+- These are not ROS/Unity runtime tests or proof of historical binary identity.
+
+Default standalone adapter limits match the old code defaults; launch config
+preserves the staged 1.12 m/s forward cap. Negative planner commands are still
+limited to 0.55 m/s in reverse; no autonomous retreat is generated here.
+Downstream footprint/fire safety checks and mission goal reselection remain.
+
+Still pending: external dependency reconciliation, isolated runtime testing,
+and separate packaging of supplemental scenes/results and manual extensions.
+The main-200-only release is not yet certified complete.

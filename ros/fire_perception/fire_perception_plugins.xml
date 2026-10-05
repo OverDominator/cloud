@@ -1,0 +1,10 @@
+<library path="lib/libfar_marker_global_planner">
+  <class name="fire_perception/FarMarkerGlobalPlanner"
+         type="fire_perception::FarMarkerGlobalPlanner"
+         base_class_type="nav_core::BaseGlobalPlanner">
+    <description>
+      Converts FAR Planner's LINE_STRIP visualization marker into the global
+      plan consumed by move_base and TEB.
+    </description>
+  </class>
+</library>
