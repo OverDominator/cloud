@@ -2,7 +2,15 @@
 
 A configurable Unity–ROS software-in-the-loop prototype for indoor robot search and rescue. The autonomous workflow connects exploration, simulated victim cues, FAR-based navigation, motion execution and rescue confirmation. The current implementation also includes keyboard driving and manual trajectory recording.
 
-This is a **private release candidate**, not a verified standalone distribution. It is hosted at [OverDominator/cloud](https://github.com/OverDominator/cloud). External ROS dependencies, portability and redistribution checks remain open; see [release checklist](docs/release_checklist.md). No demonstration video is included yet. The local dependency snapshot and verification evidence directories are not included in this repository.
+This is a **private release candidate**, not a verified standalone distribution. It is hosted at [OverDominator/cloud](https://github.com/OverDominator/cloud). External ROS dependencies, portability and redistribution checks remain open; see [release checklist](docs/release_checklist.md). The local dependency snapshot and full verification evidence directories are not included in this repository.
+
+## Demonstration video
+
+[Download the full Easy scene demonstration](media/fire-rescue-demo-v0.1.0.mp4). Repository access is required while this repository remains private.
+
+The video shows the Unity observer overview, the robot RGB image and the ROS/RViz planning view from the same run. It preserves the full recording at original speed, with explanatory labels and an end-of-video result caption; no narration or audio track is included. The observer view is not robot perception, and the RGB image is not physical thermal imaging.
+
+All four simulated victims were rescued. The task logger recorded 284.684 seconds and 179.979 metres of travel, with zero logged collisions. This is a separate demonstration, not an additional trial in the main 200 results. See [demonstration evidence](docs/recorded_demo.txt) and [trial summary](results/demo_20261005/trials.csv). It demonstrates one successful run, not guaranteed success or fresh-machine reproducibility.
 
 ## Validation status
 
@@ -23,7 +31,7 @@ FIRE_RUN_DIR=/path/to/new_run_directory \
 bash Tools/ROS/start_release_nav.sh --check
 ```
 
-The supplied workspaces must expose FAR, the custom Unity integration and ROS-TCP-Endpoint. This check does not build or download them. The new launcher itself has not yet been validated through a complete run; the successful verification used a separate test harness. See [entrypoint notes](docs/portable_entrypoint.txt). Older shortcut scripts remain machine-specific.
+The supplied workspaces must expose FAR, the custom Unity integration and ROS-TCP-Endpoint. This check does not build or download them. The recorded demonstration used this launcher in the prepared Windows/WSL validation environment, with Unity and visualization windows started separately. This does not establish fresh-machine installation or exact historical reproduction. See [entrypoint notes](docs/portable_entrypoint.txt). Older shortcut scripts remain machine-specific.
 
 Depth Anything V2 requires separately prepared model files. Missing weights cause the existing localizer to continue with LiDAR-only localization; confirm the model-ready status when testing the intended depth-enabled pipeline. See [model dependency notes](docs/perception_dependency_check.txt).
 

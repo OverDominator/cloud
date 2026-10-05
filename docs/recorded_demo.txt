@@ -1,0 +1,23 @@
+Recorded Easy scene demonstration, 5 October 2026
+
+Video: media/fire-rescue-demo-v0.1.0.mp4 (H.264, 1920x1080, about 314.47 s).
+Original-speed recording with labels and a final result caption; no audio.
+The raw MKV is retained locally. The project owner reviewed the raw footage.
+Added text was checked on an extracted frame. The presentation file is not a
+new experimental run and its nominal 30 fps is not the sensor sampling rate.
+
+Trial 20261005_204120: easy_v1_acoustic_relay.
+Logger task duration 284.684 s; path length 179.979 m.
+Four victims, four rescued, zero remaining; mission_success=True.
+Logged collision count 0; recovery attempts 0.
+See results/demo_20261005/trials.csv for the recorded summary.
+
+The recording includes time before and after the task, explaining its longer
+duration. OBS reported rendering lag 88/9452 frames and encoding skips 88/9450
+(both about 0.9%). Video export does not recover missing source frames.
+
+The run used start_release_nav.sh in the prepared Windows/WSL environment,
+plus the isolated Unity validation copy and display-only recording helpers.
+It is separate from the main 200 trials and is not a clean-machine install test.
+The observer view and its visual graph are not independent sensor evidence.
+The RGB topic's historical name does not imply physical thermal imaging.

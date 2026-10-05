@@ -1,0 +1,2 @@
+trial_id,map_name,start_time,end_time,duration_s,path_length_m,total_victims,rescued_victims,remaining_victims,mission_success,recovery_attempts,collision_count,min_fire_distance_m,final_status,stationary_time_s,recovery_time_s,recovery_transitions
+20261005_204120,easy_v1_acoustic_relay,2026-10-05T20:41:20,2026-10-05T20:46:05,284.684,179.979,4,4,0,True,0,0,4.399,mission complete: all simulated victims rescued (mission_complete),4.565,0.000,0
