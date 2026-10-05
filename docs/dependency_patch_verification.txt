@@ -1,0 +1,25 @@
+Dependency reconstruction patch verification — 2026-10-05
+
+Local-only artifacts: sibling dependency_patch_review_20261005 directory.
+These patches have not been committed to this repository pending licence review.
+
+FAR baseline: 2799b6964c141cacd1c32a14b19bc7abffbe0e52
+Applied patch to a clean checkout: 72 selected tracked source-tree files matched
+the local snapshot by SHA-256. Nine files changed, including rviz/default.rviz.
+The earlier eight-file count excluded .rviz files; this check includes them.
+Patch SHA-256: 5f2c3f08f152a3ef23abcb4ab90a9f4208637c4b649f90022d340fc1231ffc45
+
+Exploration baseline: bf0cba71365271ebff09831a05afd78578150300
+Applied patch to a clean checkout: 74 selected files matched the local snapshot
+by SHA-256. Scope: local_planner, terrain_analysis, terrain_analysis_ext,
+sensor_scan_generation, vehicle_simulator and joystick_drivers. Nine files
+changed, including added system_unity.launch and stateEstimationAligner.cpp.
+Patch SHA-256: 59a49c91b8fa0578a2e68d338493bea0c986b3c1c3e61b701fc10b1456190dea
+
+Both patches passed git apply --check and actual application before comparison.
+Workspace-level src/CMakeLists.txt links were excluded; catkin recreates these.
+Untracked historical backups and unrelated simulation packages were excluded.
+This verifies reconstruction of the selected current dependency sources only,
+not original main-200 dependency identity, redistribution permission, or a new
+end-to-end run. Rebuilt sources and full-run verification were performed in
+earlier checks from the snapshot; patched checkouts have not been rebuilt here.
