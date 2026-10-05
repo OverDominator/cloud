@@ -1,0 +1,16 @@
+Formal launcher isolation update — 2026-10-05
+
+start_release_nav.sh now requires FIRE_RUN_DIR: an absolute, not-yet-existing
+directory. ROS process logs go under roslogs and experiment logs under recordings.
+Optional FIRE_VICTIM_CONFIG selects the detector/mission configuration without
+changing archived YAML. release_perception.launch overrides only the recorder's
+output directory after loading the chosen configuration.
+
+Preflight now resolves joy, ps3joy and diagnostic_aggregator as well as the core
+packages, and parses release_perception.launch. It passed in the unified test
+workspace. --check does not create the run directory or start ROS nodes.
+
+Update/rebuild a workspace containing older launch files before using this
+launcher. This replaces older instructions that omitted FIRE_RUN_DIR.
+No new full mission was run during this update. Master/port collision handling,
+readiness delays and child-process failure reporting still need improvement.

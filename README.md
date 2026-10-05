@@ -19,6 +19,7 @@ After building the release package and the modified external dependencies, speci
 ```bash
 FIRE_ROS_SETUP=/path/to/ros_workspace/devel/setup.bash \
 FIRE_CMU_SETUP=/path/to/cmu_workspace/devel/setup.bash \
+FIRE_RUN_DIR=/path/to/new_run_directory \
 bash Tools/ROS/start_release_nav.sh --check
 ```
 

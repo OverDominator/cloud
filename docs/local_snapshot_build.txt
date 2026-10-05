@@ -24,10 +24,12 @@ After a successful build, use the unified setup for both launcher variables:
 
 FIRE_ROS_SETUP=/path/to/new_workspace/devel/setup.bash \
 FIRE_CMU_SETUP=/path/to/new_workspace/devel/setup.bash \
+FIRE_RUN_DIR=/path/to/new_run_directory \
 bash Tools/ROS/start_release_nav.sh --check
 
 Do not launch a second ROS master while another run is active. The normal launcher
 starts actual navigation when --check is omitted. Prepare logging destinations,
-model files and Unity configuration first. Its default log configuration still
-needs a user-owned override for a new machine. Licence review and distribution
+model files and Unity configuration first. FIRE_RUN_DIR is required and must
+not already exist; FIRE_VICTIM_CONFIG optionally selects a user-owned config.
+Licence review and distribution
 of exact dependency patches remain separate release requirements.
