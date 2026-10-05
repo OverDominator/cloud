@@ -2,7 +2,7 @@
 
 A configurable Unity–ROS software-in-the-loop prototype for indoor robot search and rescue. The autonomous workflow connects exploration, simulated victim cues, FAR-based navigation, motion execution and rescue confirmation. The current implementation also includes keyboard driving and manual trajectory recording.
 
-This is a **local release candidate**, not a verified standalone distribution. It has not been uploaded to GitHub. External ROS dependencies, portability and redistribution checks remain open; see [release checklist](docs/release_checklist.md). No demonstration video is included yet.
+This is a **private release candidate**, not a verified standalone distribution. It is hosted at [OverDominator/cloud](https://github.com/OverDominator/cloud). External ROS dependencies, portability and redistribution checks remain open; see [release checklist](docs/release_checklist.md). No demonstration video is included yet. The local dependency snapshot and verification evidence directories are not included in this repository.
 
 ## Validation status
 
