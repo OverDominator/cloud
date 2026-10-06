@@ -4,11 +4,11 @@
 
 A configurable Unity–ROS software-in-the-loop prototype for indoor robot search and rescue. The autonomous workflow connects exploration, simulated victim cues, FAR-based navigation, motion execution and rescue confirmation. The current implementation also includes keyboard driving and manual trajectory recording.
 
-This is a **private release candidate**, not a verified standalone distribution. It is hosted at [OverDominator/cloud](https://github.com/OverDominator/cloud). External ROS dependencies, portability and redistribution checks remain open; see [release checklist](docs/release_checklist.md). The local dependency snapshot and full verification evidence directories are not included in this repository.
+This is a **public research release candidate**, not a verified standalone distribution. It is hosted at [OverDominator/cloud](https://github.com/OverDominator/cloud). External ROS dependency delivery, portability and excluded-dependency redistribution checks remain open; see [release checklist](docs/release_checklist.md). The local dependency snapshot and full verification evidence directories are not included in this repository.
 
 ## Demonstration video
 
-[Download the full Easy scene demonstration](media/fire-rescue-demo-v0.1.0.mp4). Repository access is required while this repository remains private.
+[Download the full Easy scene demonstration](media/fire-rescue-demo-v0.1.0.mp4). The repository is public; if GitHub cannot preview this file, use its download option.
 
 The video shows the Unity observer overview, the robot RGB image and the ROS/RViz planning view from the same run. It preserves the full recording at original speed, with explanatory labels and an end-of-video result caption; no narration or audio track is included. The observer view is not robot perception, and the RGB image is not physical thermal imaging.
 
@@ -58,4 +58,4 @@ Robot pose and fire locations use simulation information. Visual target cues are
 
 ## Licence status
 
-No project-wide licence has been assigned to this release candidate. The ROS package declares MIT in its metadata, but ownership and redistribution scope must be reviewed before publication. Third-party rights remain with their respective owners. See [third-party notices](THIRD_PARTY_NOTICES.md).
+No project-wide licence has been assigned to this release candidate. Public visibility does not itself grant a blanket reuse licence. The ROS package declares MIT in its metadata; third-party rights remain with their respective owners. See [third-party notices](THIRD_PARTY_NOTICES.md) and the [publication review](docs/publication_review_20261006.md).

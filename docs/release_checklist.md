@@ -15,7 +15,7 @@
 
 `copy_manifest.csv` records source-relative paths and hashes at copy time. The staged CMake file was subsequently edited as described above; this manifest is not a final-package hash list.
 
-## Required before public upload
+## Remaining distribution and reproducibility work
 
 - Verify source ownership, asset provenance and project-wide licensing with the owner.
 - Capture external ROS dependency commits and local patches, and reconcile WSL runtime code with the Windows copy.
@@ -24,5 +24,5 @@
 - Demonstrate manual control, CSV output and safe return to ROS; do not infer mission pause/resume.
 - Retain the recorded demonstration and distinguish its results from the historical main and supplementary experiments.
 - Review files for credentials, private endpoints, usernames and paths. Automated pattern checks are only a preliminary screen.
-- Confirm repository visibility and supervisor access; retain private visibility unless explicitly approved otherwise. Project-wide licensing remains unresolved.
-- State access restrictions wherever the private repository is linked. Do not imply unrestricted public access.
+- Public visibility was authorized and enabled on 6 October 2026. See [publication review](publication_review_20261006.md). Project-wide licensing remains unresolved.
+- Keep publication status consistent across languages; do not equate public access with a blanket reuse licence or a complete reproducible distribution.

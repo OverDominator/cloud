@@ -1,3 +1,6 @@
+// Locally modified for the Unity-ROS fire-rescue integration.
+// Differs from the accompanying ROS-TCP-Connector-main baseline; marked 2026-10-06.
+// See third_party/ros_tcp_connector/LICENSE and THIRD_PARTY_NOTICES.md at repository root.
 using System.Collections.Generic;
 using System.IO;
 using Unity.Robotics.ROSTCPConnector.MessageGeneration;

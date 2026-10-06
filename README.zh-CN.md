@@ -6,11 +6,11 @@
 
 本文件为经项目所有者评审的中文版说明。英文版见 [README.md](README.md)。中英文说明已按现有验证记录同步；文档更新不表示完成了新的运行验证。
 
-当前项目是**私有发布候选版本**，不是已经验证可独立安装的完整发行版。仓库为 [OverDominator/cloud](https://github.com/OverDominator/cloud)。外部 ROS 依赖、跨机器部署和再分发条件仍需完善，详见[发布检查清单](docs/zh-CN/release_checklist.md)。本地依赖快照和完整验证证据目录未包含在仓库中。
+当前项目是**公开的研究发布候选版本**，不是已经验证可独立安装的完整发行版。仓库为 [OverDominator/cloud](https://github.com/OverDominator/cloud)。外部 ROS 依赖交付、跨机器部署及未包含依赖的再分发条件仍需完善，详见[发布检查清单](docs/zh-CN/release_checklist.md)。本地依赖快照和完整验证证据目录未包含在仓库中。
 
 ## 演示视频
 
-[下载 Easy 场景完整演示视频](media/fire-rescue-demo-v0.1.0.mp4)。仓库保持私有期间，需要仓库访问权限。
+[下载 Easy 场景完整演示视频](media/fire-rescue-demo-v0.1.0.mp4)。仓库已公开；如果 GitHub 无法在线预览，可下载后观看。
 
 视频同时展示同一轮运行的 Unity 外部观察视角、机器人 RGB 图像和 ROS/RViz 规划视图。视频保留完整录制过程和原始播放速度，添加了说明文字及片尾结果，没有配音或音轨。外部观察视角不是机器人感知输入；RGB 图像也不代表物理热成像。
 
@@ -63,4 +63,4 @@ Depth Anything V2 需要另行准备模型文件。权重缺失时，现有定�
 
 ## 许可证状态
 
-发布候选版本尚未指定覆盖整个项目的许可证。ROS 包元数据声明 MIT，但公开发布前仍需核实所有权及可再分发范围。第三方权利归相应权利人所有，详见[第三方声明中文版](docs/zh-CN/third_party_notices.md)。
+发布候选版本尚未指定覆盖整个项目的许可证，公开可见不等于授予整个项目的无限制复用许可。ROS 包元数据声明 MIT，第三方权利归相应权利人所有，详见[第三方声明中文版](docs/zh-CN/third_party_notices.md)及[公开检查记录](docs/publication_review_20261006.md)。
