@@ -1,5 +1,7 @@
 # Release checklist
 
+[简体中文](zh-CN/release_checklist.md)
+
 ## Completed staging work
 
 - Created a separate local candidate without changing the running project.
@@ -8,6 +10,8 @@
 - Excluded alternative-planner files outside the FAR release scope; removed their two Python install entries from the staged CMake file only.
 - Preserved four main-batch summaries and partial archived source snapshots.
 - Exported the selected 30 supplementary outcomes with explicit selection limitations.
+- Checked Unity import, isolated ROS builds, communication and one complete autonomous task on the existing machine.
+- Recorded a separate complete demonstration and uploaded the candidate to the private repository `OverDominator/cloud`.
 
 `copy_manifest.csv` records source-relative paths and hashes at copy time. The staged CMake file was subsequently edited as described above; this manifest is not a final-package hash list.
 
@@ -16,9 +20,9 @@
 - Verify source ownership, asset provenance and project-wide licensing with the owner.
 - Capture external ROS dependency commits and local patches, and reconcile WSL runtime code with the Windows copy.
 - Replace user-specific paths and document endpoint configuration; do not run legacy installation helpers blindly.
-- Verify Unity asset references and package import in a fresh location, then build and run the isolated ROS/Unity chain.
+- Verify installation on a fresh machine; the existing-machine isolated run does not replace this test.
 - Demonstrate manual control, CSV output and safe return to ROS; do not infer mission pause/resume.
-- Prepare a real autonomous demonstration video and representative screenshots.
+- Retain the recorded demonstration and distinguish its results from the historical main and supplementary experiments.
 - Review files for credentials, private endpoints, usernames and paths. Automated pattern checks are only a preliminary screen.
-- Decide the GitHub account, repository name, visibility and licence. No repository has been created and nothing has been uploaded.
-- Add a verified repository link to the dissertation only after publication is complete.
+- Confirm repository visibility and supervisor access; retain private visibility unless explicitly approved otherwise. Project-wide licensing remains unresolved.
+- State access restrictions wherever the private repository is linked. Do not imply unrestricted public access.

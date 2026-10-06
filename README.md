@@ -1,5 +1,7 @@
 # Unity ROS Fire Rescue
 
+[English](README.md) | [简体中文](README.zh-CN.md)
+
 A configurable Unity–ROS software-in-the-loop prototype for indoor robot search and rescue. The autonomous workflow connects exploration, simulated victim cues, FAR-based navigation, motion execution and rescue confirmation. The current implementation also includes keyboard driving and manual trajectory recording.
 
 This is a **private release candidate**, not a verified standalone distribution. It is hosted at [OverDominator/cloud](https://github.com/OverDominator/cloud). External ROS dependencies, portability and redistribution checks remain open; see [release checklist](docs/release_checklist.md). The local dependency snapshot and full verification evidence directories are not included in this repository.

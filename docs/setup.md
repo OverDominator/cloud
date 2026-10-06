@@ -1,5 +1,7 @@
 # Setup status
 
+[简体中文](zh-CN/setup.md)
+
 ## Known environment
 
 - Unity editor: `6000.0.75f1`, from the source project's `ProjectVersion.txt`.
@@ -12,7 +14,7 @@
 
 Open `unity/` in the matching editor. Core scenes include `SampleScene`, `FireRescue_Simplified` (Original configuration) and `FireRescue_Easy`. The existing build settings initially select `SampleScene`; open the required scene explicitly. Preserve `.meta` files.
 
-Do not start the staged copy alongside the original connected simulation: both can use the same ROS endpoint and topics. A clean import and isolated run have not yet been performed.
+Do not start the staged copy alongside the original connected simulation: both can use the same ROS endpoint and topics. Import, isolated builds, communication and a complete autonomous run have been checked on the existing Windows/WSL machine. This is not a fresh-machine installation test.
 
 ## Missing external components
 
@@ -22,6 +24,10 @@ The legacy `Tools/ROS/start_fire_nav.sh` assumes `/root/catkin_ws` and `/root/au
 
 The depth localiser defaults to `depth-anything/Depth-Anything-V2-Small-hf`, with configuration overrides. Model weights are not included. Verify the active model configuration and its licence before writing download instructions.
 
-## Pending validation
+## Prepared-environment entrypoint and validation scope
 
-Complete dependency capture, configurable paths and endpoint settings first. Then test in a separate workspace: import Unity, build ROS packages, establish one communication endpoint, start one planning/mission stack, and run one isolated rescue demonstration. No fresh-install success is claimed for this release candidate.
+Use `Tools/ROS/start_release_nav.sh` with `FIRE_ROS_SETUP` and `FIRE_CMU_SETUP` pointing to already-built workspaces and `FIRE_RUN_DIR` to a new run directory. The workspaces must provide the modified Unity integration launch file. `--check` checks package and launch-file discovery; it does not build dependencies or start the system. Without `--check`, the launcher starts the prepared ROS stack; Unity and visualization windows are started separately.
+
+The isolated validation and the later recorded demonstration are different runs. The demonstration used this entrypoint. See [validation evidence](full_validation_complete.txt), [demonstration evidence](recorded_demo.txt) and [entrypoint notes](portable_entrypoint.txt). Missing depth weights allow the localizer to continue with LiDAR-only localization; confirm model readiness for depth-enabled testing.
+
+External dependency delivery, exact version and patch capture, endpoint documentation and fresh-machine installation remain pending. No fresh-install success or exact reproduction of the historical 200-trial configuration is claimed.
