@@ -1,0 +1,45 @@
+{
+  "variant": "no_call",
+  "pilot_only": false,
+  "odom_messages": 9831,
+  "scan_messages": 3672,
+  "image_messages": 1841,
+  "nonzero_commands": 11497,
+  "distance_m": 520.7464869352875,
+  "states": [
+    "LISTENING",
+    "AUTONOMOUS_EXPLORATION",
+    "RESCUING",
+    "AUTONOMOUS_EXPLORATION"
+  ],
+  "rescued": 1,
+  "total": 4,
+  "collisions": 0,
+  "visual_positive": 0,
+  "call_positive": 1193,
+  "phase": "formal",
+  "pair_id": 29,
+  "seed": 27029,
+  "scene": "FireRescue_House_Expanded",
+  "process_alive": [
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "position": [
+    13.486699104309082,
+    3.0279734134674072
+  ],
+  "legacy_total_topic": 4,
+  "remaining": 3,
+  "count_source": "scene_state",
+  "episode": "f87afe58bd9f4e448297c0a62fab7a8c",
+  "call_guidance_param": false,
+  "readiness_pass": true,
+  "readiness_scope": "communication, movement, expected victim count, process liveness and disabled-call state check; not mission success",
+  "finished": true,
+  "data_integrity_pass": true,
+  "fire_selection_verified": true
+}

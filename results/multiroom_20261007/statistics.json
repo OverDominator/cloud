@@ -1,0 +1,193 @@
+{
+  "main": {
+    "pair_count": 50,
+    "both_success_count": 43,
+    "full_only_success": 6,
+    "no_call_only_success": 1,
+    "mcnemar_exact_two_sided_p": 0.125,
+    "variants": {
+      "full": {
+        "n": 50,
+        "success": 49,
+        "timeout": 1,
+        "rescued_total": 197,
+        "collision_events": 0,
+        "trials_with_collision": 0
+      },
+      "no_call": {
+        "n": 50,
+        "success": 44,
+        "timeout": 6,
+        "rescued_total": 181,
+        "collision_events": 1,
+        "trials_with_collision": 1
+      }
+    },
+    "paired_both_success": {
+      "duration_s": {
+        "full": {
+          "n": 43,
+          "mean": 221.2491162790698,
+          "median": 212.487,
+          "std": 31.330922348383602,
+          "min": 186.454,
+          "max": 300.482
+        },
+        "no_call": {
+          "n": 43,
+          "mean": 248.85637209302328,
+          "median": 243.581,
+          "std": 43.27306223827126,
+          "min": 199.15,
+          "max": 483.887
+        },
+        "difference_full_minus_no_call": {
+          "n": 43,
+          "mean": -27.607255813953486,
+          "median": -29.00199999999998,
+          "std": 50.037538413957165,
+          "min": -268.084,
+          "max": 48.79000000000002
+        },
+        "mean_difference_bootstrap_percentile_ci95": [
+          -43.754641279069766,
+          -14.115398255813961
+        ],
+        "full_lower_count": 32,
+        "full_higher_count": 11
+      },
+      "path_length_m": {
+        "full": {
+          "n": 43,
+          "mean": 168.16181395348838,
+          "median": 162.256,
+          "std": 17.23432887092588,
+          "min": 153.259,
+          "max": 216.496
+        },
+        "no_call": {
+          "n": 43,
+          "mean": 184.43690697674418,
+          "median": 185.259,
+          "std": 16.409811121361507,
+          "min": 155.458,
+          "max": 227.679
+        },
+        "difference_full_minus_no_call": {
+          "n": 43,
+          "mean": -16.275093023255813,
+          "median": -16.826999999999998,
+          "std": 23.37678121842265,
+          "min": -74.42000000000002,
+          "max": 24.75800000000001
+        },
+        "mean_difference_bootstrap_percentile_ci95": [
+          -23.299959883720934,
+          -9.383725581395355
+        ],
+        "full_lower_count": 29,
+        "full_higher_count": 14
+      }
+    }
+  },
+  "retry_sensitivity": {
+    "pair_count": 50,
+    "both_success_count": 44,
+    "full_only_success": 5,
+    "no_call_only_success": 1,
+    "mcnemar_exact_two_sided_p": 0.21875,
+    "variants": {
+      "full": {
+        "n": 50,
+        "success": 49,
+        "timeout": 1,
+        "rescued_total": 197,
+        "collision_events": 0,
+        "trials_with_collision": 0
+      },
+      "no_call": {
+        "n": 50,
+        "success": 45,
+        "timeout": 5,
+        "rescued_total": 185,
+        "collision_events": 1,
+        "trials_with_collision": 1
+      }
+    },
+    "paired_both_success": {
+      "duration_s": {
+        "full": {
+          "n": 44,
+          "mean": 221.25202272727276,
+          "median": 213.44650000000001,
+          "std": 30.964472207555787,
+          "min": 186.454,
+          "max": 300.482
+        },
+        "no_call": {
+          "n": 44,
+          "mean": 250.29095454545453,
+          "median": 243.6225,
+          "std": 43.8128204609344,
+          "min": 199.15,
+          "max": 483.887
+        },
+        "difference_full_minus_no_call": {
+          "n": 44,
+          "mean": -29.03893181818182,
+          "median": -30.352499999999992,
+          "std": 50.35588363046115,
+          "min": -268.084,
+          "max": 48.79000000000002
+        },
+        "mean_difference_bootstrap_percentile_ci95": [
+          -45.19625568181817,
+          -15.60352215909092
+        ],
+        "full_lower_count": 33,
+        "full_higher_count": 11
+      },
+      "path_length_m": {
+        "full": {
+          "n": 44,
+          "mean": 168.04195454545456,
+          "median": 162.2885,
+          "std": 17.05129664708004,
+          "min": 153.259,
+          "max": 216.496
+        },
+        "no_call": {
+          "n": 44,
+          "mean": 185.06886363636363,
+          "median": 186.208,
+          "std": 16.75087391485009,
+          "min": 155.458,
+          "max": 227.679
+        },
+        "difference_full_minus_no_call": {
+          "n": 44,
+          "mean": -17.02690909090909,
+          "median": -18.076999999999998,
+          "std": 23.635465097256635,
+          "min": -74.42000000000002,
+          "max": 24.75800000000001
+        },
+        "mean_difference_bootstrap_percentile_ci95": [
+          -23.93614034090909,
+          -10.125565909090911
+        ],
+        "full_lower_count": 30,
+        "full_higher_count": 14
+      }
+    }
+  },
+  "methods": {
+    "primary": "50 pairs, original pair 34 no_call retained; successful retry is supplementary only",
+    "continuous_metrics": "Only pairs in which both methods completed all 4 victims; conditional, not all-trial efficiency",
+    "difference": "full minus no_call; negative means lower time or distance",
+    "bootstrap": "20000 paired resamples, numpy RandomState seed 20261007, percentile 95% CI",
+    "success_test": "Exact two-sided McNemar, binomial discordant pairs, no continuity correction",
+    "limitations": "Exploratory post-hoc analysis. Same seed is verified; identical realized trajectories and all environmental states are not assumed. Simulated call cues and pseudo-thermal class rendering, not real acoustic or radiometric sensing.",
+    "exclusions": "Startup-invalid 20261007_184809_full not included. Qualification pilots and video demo excluded. Original valid timeout 20261007_193332_no_call retained."
+  }
+}

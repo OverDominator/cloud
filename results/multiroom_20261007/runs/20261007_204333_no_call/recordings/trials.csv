@@ -1,0 +1,2 @@
+trial_id,map_name,start_time,end_time,duration_s,path_length_m,total_victims,rescued_victims,remaining_victims,mission_success,recovery_attempts,collision_count,min_fire_distance_m,final_status,stationary_time_s,recovery_time_s,recovery_transitions
+20261007_204351,house_expanded_pilot,2026-10-07T20:43:51,2026-10-07T20:47:58,246.470,198.032,4,4,0,True,0,0,7.936,mission complete: all simulated victims rescued (mission_complete),2.419,0.000,0

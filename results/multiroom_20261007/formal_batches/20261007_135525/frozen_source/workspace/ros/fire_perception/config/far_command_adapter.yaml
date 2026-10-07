@@ -1,0 +1,10 @@
+# Normal-only adapter, preserving normal-path limits from staged configuration.
+control_rate: 20.0
+enable_active_recovery: false
+raw_command_timeout: 0.6
+odom_timeout: 0.8
+normal_max_forward_speed: 1.12
+normal_max_reverse_speed: 0.55
+normal_max_turn_rate: 0.90
+normal_high_speed_turn_threshold: 0.75
+normal_high_speed_max_turn_rate: 0.45

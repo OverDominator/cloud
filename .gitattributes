@@ -1,0 +1,3 @@
+# Preserve archived evidence byte-for-byte for published SHA-256 verification.
+results/multiroom_20261007/** -text
+results/demo_20261007/** -text

@@ -1,0 +1,14 @@
+{
+  "status": "prepared_not_started",
+  "pairs": 50,
+  "trials": 100,
+  "duration_seconds": 600,
+  "variants": ["full", "no_call"],
+  "seed_formula": "27000 + pair_id",
+  "order": "odd pair: full then no_call; even pair: no_call then full",
+  "scene": "FireRescue_House_Expanded",
+  "victims": 4,
+  "fire_count": 2,
+  "fire_candidates": 12,
+  "note": "50 paired repetitions; differing seeds do not guarantee unique fire combinations. Geometry and victim positions are fixed. All failures retained. Start only after 5 consecutive <=600-second full successes on one frozen version."
+}

@@ -1,0 +1,8 @@
+﻿pair_id,seed,variant,run,success,duration_s,path_length_m,rescued,collisions,source_csv,original_pair34
+16,27016,full,20261007_161631_full,0,600.734,26.066,1,0,runs/20261007_161631_full/recordings/trials.csv,0
+17,27017,no_call,20261007_163046_no_call,0,600.288,39.546,0,0,runs/20261007_163046_no_call/recordings/trials.csv,0
+21,27021,no_call,20261007_171156_no_call,0,600.659,112.305,2,0,runs/20261007_171156_no_call/recordings/trials.csv,0
+22,27022,no_call,20261007_172227_no_call,0,600.524,154.082,2,1,runs/20261007_172227_no_call/recordings/trials.csv,0
+29,27029,no_call,20261007_183250_no_call,0,600.456,506.563,1,0,runs/20261007_183250_no_call/recordings/trials.csv,0
+34,27034,no_call,20261007_193332_no_call,0,600.138,9.078,0,0,formal_batches/20261007_135525/excluded_user_requested/20261007_193332_no_call/recordings/trials.csv,1
+36,27036,no_call,20261007_200438_no_call,0,600.686,8.388,0,0,runs/20261007_200438_no_call/recordings/trials.csv,0

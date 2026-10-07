@@ -1,0 +1,22 @@
+<launch>
+  <arg name="log_directory" />
+  <arg name="call_guidance" default="true" />
+  <arg name="duration" default="180" />
+  <param name="/experiment_data_logger/require_scene_counts" value="true" type="bool" />
+  <include file="$(find fire_perception)/launch/release_perception.launch">
+    <arg name="log_directory" value="$(arg log_directory)" />
+  </include>
+  <param name="/victim_mission_manager/enable_simulated_call_guidance" value="$(arg call_guidance)" type="bool" />
+  <!-- Do not retry a stalled region repeatedly within the 300-second pilot. -->
+  <param name="/victim_mission_manager/exploration_failed_goal_cooldown" value="600.0" />
+  <param name="/victim_mission_manager/exploration_node_max_distance" value="60.0" />
+  <!-- Unity world z -> ROS x, -Unity x -> ROS y. Outer wall inner faces
+       are +/-29.5 and +/-31.5. Keep goal centres 3 units inside them.
+       Shared by both arms; this is a known arena bound, not a target cue. -->
+  <param name="/victim_mission_manager/mission_map_min_x" value="-26.5" />
+  <param name="/victim_mission_manager/mission_map_max_x" value="26.5" />
+  <param name="/victim_mission_manager/mission_map_min_y" value="-28.5" />
+  <param name="/victim_mission_manager/mission_map_max_y" value="28.5" />
+  <param name="/experiment_data_logger/experiment_map_name" value="house_expanded_pilot" />
+  <param name="/experiment_data_logger/experiment_max_duration_seconds" value="$(arg duration)" />
+</launch>

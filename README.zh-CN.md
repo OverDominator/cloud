@@ -1,5 +1,15 @@
 # Unity–ROS 消防搜救仿真项目
 
+## 多房间更新
+
+[新版实时演示](media/multiroom_rescue_demo_realtime.mp4) · [1.5倍速展示版](media/multiroom_rescue_demo_presentation.mp4)
+
+带家具房屋的独立演示完成4/4人确认，224.096秒、175.400米、记录碰撞零，不计入正式实验。观察者画面不是感知输入，机器人画面是类别编码伪热图像，并非物理测温。
+
+新增50对实验中，完整方案成功49/50，无呼救成功44/50。主分析保留原始有效超时，成功重跑单独披露。见[中文统计与范围说明](docs/zh-CN/multiroom_results_20261007.md)。旧版代码和结果保留，不将新批次视为旧版本的重复验证。
+
+![多房间任务过程](results/multiroom_20261007/task_sequence.png)
+
 [English](README.md) | [简体中文](README.zh-CN.md)
 
 本项目是一个可配置的室内机器人搜救软件在环原型，基于 Unity 和 ROS，将自主探索、模拟受困者线索、FAR 路径规划、机器人运动执行和救援确认连接成完整任务流程。当前实现还提供键盘驾驶和人工驾驶轨迹记录功能。

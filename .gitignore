@@ -41,3 +41,9 @@ __pycache__/
 *.pptx
 .DS_Store
 Thumbs.db
+
+# Published, reviewed demonstration videos
+!media/multiroom_rescue_demo_realtime.mp4
+!media/multiroom_rescue_demo_presentation.mp4
+# Locally regenerated analysis (published inputs and summaries are retained)
+results/multiroom_20261007/analysis_paired_20261007/

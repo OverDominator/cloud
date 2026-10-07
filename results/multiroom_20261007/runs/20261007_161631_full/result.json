@@ -1,0 +1,50 @@
+{
+  "variant": "full",
+  "pilot_only": false,
+  "odom_messages": 10433,
+  "scan_messages": 3637,
+  "image_messages": 1745,
+  "nonzero_commands": 752,
+  "distance_m": 26.256358791629847,
+  "states": [
+    "LISTENING",
+    "AUTONOMOUS_EXPLORATION",
+    "CALL_GUIDANCE",
+    "VISUAL_GUIDANCE",
+    "NAVIGATING",
+    "RESCUING",
+    "VISUAL_GUIDANCE",
+    "AUTONOMOUS_EXPLORATION"
+  ],
+  "rescued": 1,
+  "total": 4,
+  "collisions": 0,
+  "visual_positive": 85,
+  "call_positive": 66,
+  "phase": "formal",
+  "pair_id": 16,
+  "seed": 27016,
+  "scene": "FireRescue_House_Expanded",
+  "process_alive": [
+    true,
+    true,
+    true,
+    true,
+    true
+  ],
+  "position": [
+    -17.199567794799805,
+    20.71995735168457
+  ],
+  "legacy_total_topic": 4,
+  "remaining": 3,
+  "count_source": "scene_state",
+  "episode": "a6971bead6fa4c8fbb2407a03232f286",
+  "monitor_image_subscription_reconnected": true,
+  "call_guidance_param": true,
+  "readiness_pass": true,
+  "readiness_scope": "communication, movement, expected victim count, process liveness and disabled-call state check; not mission success",
+  "finished": true,
+  "data_integrity_pass": true,
+  "fire_selection_verified": true
+}

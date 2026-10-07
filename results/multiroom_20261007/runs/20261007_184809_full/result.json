@@ -1,0 +1,21 @@
+{
+  "variant": "full",
+  "pilot_only": false,
+  "odom_messages": 0,
+  "scan_messages": 0,
+  "image_messages": 0,
+  "nonzero_commands": 0,
+  "distance_m": 0.0,
+  "states": [],
+  "rescued": 0,
+  "total": 0,
+  "collisions": 0,
+  "visual_positive": 0,
+  "call_positive": 0,
+  "phase": "formal",
+  "pair_id": 30,
+  "seed": 27030,
+  "scene": "FireRescue_House_Expanded",
+  "fire_selection_verified": false,
+  "data_integrity_pass": false
+}

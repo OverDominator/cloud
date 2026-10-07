@@ -1,0 +1,602 @@
+﻿[
+    {
+        "pair_id":  1,
+        "variant":  "full",
+        "seed":  27001,
+        "duration":  600
+    },
+    {
+        "pair_id":  1,
+        "variant":  "no_call",
+        "seed":  27001,
+        "duration":  600
+    },
+    {
+        "pair_id":  2,
+        "variant":  "no_call",
+        "seed":  27002,
+        "duration":  600
+    },
+    {
+        "pair_id":  2,
+        "variant":  "full",
+        "seed":  27002,
+        "duration":  600
+    },
+    {
+        "pair_id":  3,
+        "variant":  "full",
+        "seed":  27003,
+        "duration":  600
+    },
+    {
+        "pair_id":  3,
+        "variant":  "no_call",
+        "seed":  27003,
+        "duration":  600
+    },
+    {
+        "pair_id":  4,
+        "variant":  "no_call",
+        "seed":  27004,
+        "duration":  600
+    },
+    {
+        "pair_id":  4,
+        "variant":  "full",
+        "seed":  27004,
+        "duration":  600
+    },
+    {
+        "pair_id":  5,
+        "variant":  "full",
+        "seed":  27005,
+        "duration":  600
+    },
+    {
+        "pair_id":  5,
+        "variant":  "no_call",
+        "seed":  27005,
+        "duration":  600
+    },
+    {
+        "pair_id":  6,
+        "variant":  "no_call",
+        "seed":  27006,
+        "duration":  600
+    },
+    {
+        "pair_id":  6,
+        "variant":  "full",
+        "seed":  27006,
+        "duration":  600
+    },
+    {
+        "pair_id":  7,
+        "variant":  "full",
+        "seed":  27007,
+        "duration":  600
+    },
+    {
+        "pair_id":  7,
+        "variant":  "no_call",
+        "seed":  27007,
+        "duration":  600
+    },
+    {
+        "pair_id":  8,
+        "variant":  "no_call",
+        "seed":  27008,
+        "duration":  600
+    },
+    {
+        "pair_id":  8,
+        "variant":  "full",
+        "seed":  27008,
+        "duration":  600
+    },
+    {
+        "pair_id":  9,
+        "variant":  "full",
+        "seed":  27009,
+        "duration":  600
+    },
+    {
+        "pair_id":  9,
+        "variant":  "no_call",
+        "seed":  27009,
+        "duration":  600
+    },
+    {
+        "pair_id":  10,
+        "variant":  "no_call",
+        "seed":  27010,
+        "duration":  600
+    },
+    {
+        "pair_id":  10,
+        "variant":  "full",
+        "seed":  27010,
+        "duration":  600
+    },
+    {
+        "pair_id":  11,
+        "variant":  "full",
+        "seed":  27011,
+        "duration":  600
+    },
+    {
+        "pair_id":  11,
+        "variant":  "no_call",
+        "seed":  27011,
+        "duration":  600
+    },
+    {
+        "pair_id":  12,
+        "variant":  "no_call",
+        "seed":  27012,
+        "duration":  600
+    },
+    {
+        "pair_id":  12,
+        "variant":  "full",
+        "seed":  27012,
+        "duration":  600
+    },
+    {
+        "pair_id":  13,
+        "variant":  "full",
+        "seed":  27013,
+        "duration":  600
+    },
+    {
+        "pair_id":  13,
+        "variant":  "no_call",
+        "seed":  27013,
+        "duration":  600
+    },
+    {
+        "pair_id":  14,
+        "variant":  "no_call",
+        "seed":  27014,
+        "duration":  600
+    },
+    {
+        "pair_id":  14,
+        "variant":  "full",
+        "seed":  27014,
+        "duration":  600
+    },
+    {
+        "pair_id":  15,
+        "variant":  "full",
+        "seed":  27015,
+        "duration":  600
+    },
+    {
+        "pair_id":  15,
+        "variant":  "no_call",
+        "seed":  27015,
+        "duration":  600
+    },
+    {
+        "pair_id":  16,
+        "variant":  "no_call",
+        "seed":  27016,
+        "duration":  600
+    },
+    {
+        "pair_id":  16,
+        "variant":  "full",
+        "seed":  27016,
+        "duration":  600
+    },
+    {
+        "pair_id":  17,
+        "variant":  "full",
+        "seed":  27017,
+        "duration":  600
+    },
+    {
+        "pair_id":  17,
+        "variant":  "no_call",
+        "seed":  27017,
+        "duration":  600
+    },
+    {
+        "pair_id":  18,
+        "variant":  "no_call",
+        "seed":  27018,
+        "duration":  600
+    },
+    {
+        "pair_id":  18,
+        "variant":  "full",
+        "seed":  27018,
+        "duration":  600
+    },
+    {
+        "pair_id":  19,
+        "variant":  "full",
+        "seed":  27019,
+        "duration":  600
+    },
+    {
+        "pair_id":  19,
+        "variant":  "no_call",
+        "seed":  27019,
+        "duration":  600
+    },
+    {
+        "pair_id":  20,
+        "variant":  "no_call",
+        "seed":  27020,
+        "duration":  600
+    },
+    {
+        "pair_id":  20,
+        "variant":  "full",
+        "seed":  27020,
+        "duration":  600
+    },
+    {
+        "pair_id":  21,
+        "variant":  "full",
+        "seed":  27021,
+        "duration":  600
+    },
+    {
+        "pair_id":  21,
+        "variant":  "no_call",
+        "seed":  27021,
+        "duration":  600
+    },
+    {
+        "pair_id":  22,
+        "variant":  "no_call",
+        "seed":  27022,
+        "duration":  600
+    },
+    {
+        "pair_id":  22,
+        "variant":  "full",
+        "seed":  27022,
+        "duration":  600
+    },
+    {
+        "pair_id":  23,
+        "variant":  "full",
+        "seed":  27023,
+        "duration":  600
+    },
+    {
+        "pair_id":  23,
+        "variant":  "no_call",
+        "seed":  27023,
+        "duration":  600
+    },
+    {
+        "pair_id":  24,
+        "variant":  "no_call",
+        "seed":  27024,
+        "duration":  600
+    },
+    {
+        "pair_id":  24,
+        "variant":  "full",
+        "seed":  27024,
+        "duration":  600
+    },
+    {
+        "pair_id":  25,
+        "variant":  "full",
+        "seed":  27025,
+        "duration":  600
+    },
+    {
+        "pair_id":  25,
+        "variant":  "no_call",
+        "seed":  27025,
+        "duration":  600
+    },
+    {
+        "pair_id":  26,
+        "variant":  "no_call",
+        "seed":  27026,
+        "duration":  600
+    },
+    {
+        "pair_id":  26,
+        "variant":  "full",
+        "seed":  27026,
+        "duration":  600
+    },
+    {
+        "pair_id":  27,
+        "variant":  "full",
+        "seed":  27027,
+        "duration":  600
+    },
+    {
+        "pair_id":  27,
+        "variant":  "no_call",
+        "seed":  27027,
+        "duration":  600
+    },
+    {
+        "pair_id":  28,
+        "variant":  "no_call",
+        "seed":  27028,
+        "duration":  600
+    },
+    {
+        "pair_id":  28,
+        "variant":  "full",
+        "seed":  27028,
+        "duration":  600
+    },
+    {
+        "pair_id":  29,
+        "variant":  "full",
+        "seed":  27029,
+        "duration":  600
+    },
+    {
+        "pair_id":  29,
+        "variant":  "no_call",
+        "seed":  27029,
+        "duration":  600
+    },
+    {
+        "pair_id":  30,
+        "variant":  "no_call",
+        "seed":  27030,
+        "duration":  600
+    },
+    {
+        "pair_id":  30,
+        "variant":  "full",
+        "seed":  27030,
+        "duration":  600
+    },
+    {
+        "pair_id":  31,
+        "variant":  "full",
+        "seed":  27031,
+        "duration":  600
+    },
+    {
+        "pair_id":  31,
+        "variant":  "no_call",
+        "seed":  27031,
+        "duration":  600
+    },
+    {
+        "pair_id":  32,
+        "variant":  "no_call",
+        "seed":  27032,
+        "duration":  600
+    },
+    {
+        "pair_id":  32,
+        "variant":  "full",
+        "seed":  27032,
+        "duration":  600
+    },
+    {
+        "pair_id":  33,
+        "variant":  "full",
+        "seed":  27033,
+        "duration":  600
+    },
+    {
+        "pair_id":  33,
+        "variant":  "no_call",
+        "seed":  27033,
+        "duration":  600
+    },
+    {
+        "pair_id":  34,
+        "variant":  "no_call",
+        "seed":  27034,
+        "duration":  600
+    },
+    {
+        "pair_id":  34,
+        "variant":  "full",
+        "seed":  27034,
+        "duration":  600
+    },
+    {
+        "pair_id":  35,
+        "variant":  "full",
+        "seed":  27035,
+        "duration":  600
+    },
+    {
+        "pair_id":  35,
+        "variant":  "no_call",
+        "seed":  27035,
+        "duration":  600
+    },
+    {
+        "pair_id":  36,
+        "variant":  "no_call",
+        "seed":  27036,
+        "duration":  600
+    },
+    {
+        "pair_id":  36,
+        "variant":  "full",
+        "seed":  27036,
+        "duration":  600
+    },
+    {
+        "pair_id":  37,
+        "variant":  "full",
+        "seed":  27037,
+        "duration":  600
+    },
+    {
+        "pair_id":  37,
+        "variant":  "no_call",
+        "seed":  27037,
+        "duration":  600
+    },
+    {
+        "pair_id":  38,
+        "variant":  "no_call",
+        "seed":  27038,
+        "duration":  600
+    },
+    {
+        "pair_id":  38,
+        "variant":  "full",
+        "seed":  27038,
+        "duration":  600
+    },
+    {
+        "pair_id":  39,
+        "variant":  "full",
+        "seed":  27039,
+        "duration":  600
+    },
+    {
+        "pair_id":  39,
+        "variant":  "no_call",
+        "seed":  27039,
+        "duration":  600
+    },
+    {
+        "pair_id":  40,
+        "variant":  "no_call",
+        "seed":  27040,
+        "duration":  600
+    },
+    {
+        "pair_id":  40,
+        "variant":  "full",
+        "seed":  27040,
+        "duration":  600
+    },
+    {
+        "pair_id":  41,
+        "variant":  "full",
+        "seed":  27041,
+        "duration":  600
+    },
+    {
+        "pair_id":  41,
+        "variant":  "no_call",
+        "seed":  27041,
+        "duration":  600
+    },
+    {
+        "pair_id":  42,
+        "variant":  "no_call",
+        "seed":  27042,
+        "duration":  600
+    },
+    {
+        "pair_id":  42,
+        "variant":  "full",
+        "seed":  27042,
+        "duration":  600
+    },
+    {
+        "pair_id":  43,
+        "variant":  "full",
+        "seed":  27043,
+        "duration":  600
+    },
+    {
+        "pair_id":  43,
+        "variant":  "no_call",
+        "seed":  27043,
+        "duration":  600
+    },
+    {
+        "pair_id":  44,
+        "variant":  "no_call",
+        "seed":  27044,
+        "duration":  600
+    },
+    {
+        "pair_id":  44,
+        "variant":  "full",
+        "seed":  27044,
+        "duration":  600
+    },
+    {
+        "pair_id":  45,
+        "variant":  "full",
+        "seed":  27045,
+        "duration":  600
+    },
+    {
+        "pair_id":  45,
+        "variant":  "no_call",
+        "seed":  27045,
+        "duration":  600
+    },
+    {
+        "pair_id":  46,
+        "variant":  "no_call",
+        "seed":  27046,
+        "duration":  600
+    },
+    {
+        "pair_id":  46,
+        "variant":  "full",
+        "seed":  27046,
+        "duration":  600
+    },
+    {
+        "pair_id":  47,
+        "variant":  "full",
+        "seed":  27047,
+        "duration":  600
+    },
+    {
+        "pair_id":  47,
+        "variant":  "no_call",
+        "seed":  27047,
+        "duration":  600
+    },
+    {
+        "pair_id":  48,
+        "variant":  "no_call",
+        "seed":  27048,
+        "duration":  600
+    },
+    {
+        "pair_id":  48,
+        "variant":  "full",
+        "seed":  27048,
+        "duration":  600
+    },
+    {
+        "pair_id":  49,
+        "variant":  "full",
+        "seed":  27049,
+        "duration":  600
+    },
+    {
+        "pair_id":  49,
+        "variant":  "no_call",
+        "seed":  27049,
+        "duration":  600
+    },
+    {
+        "pair_id":  50,
+        "variant":  "no_call",
+        "seed":  27050,
+        "duration":  600
+    },
+    {
+        "pair_id":  50,
+        "variant":  "full",
+        "seed":  27050,
+        "duration":  600
+    }
+]

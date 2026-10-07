@@ -1,0 +1,53 @@
+<launch>
+  <arg name="config" default="$(find fire_perception)/config/fire_color_detector.yaml"/>
+  <arg name="victim_config" default="$(find fire_perception)/config/victim_color_detector.yaml"/>
+
+  <node pkg="fire_perception"
+        type="fire_color_detector.py"
+        name="fire_color_detector"
+        output="screen">
+    <rosparam command="load" file="$(arg config)"/>
+  </node>
+
+  <node pkg="fire_perception"
+        type="fire_pointcloud_localizer.py"
+        name="fire_pointcloud_localizer"
+        output="screen">
+    <rosparam command="load" file="$(arg config)"/>
+  </node>
+
+  <node pkg="fire_perception"
+        type="fire_keepout_cloud.py"
+        name="fire_keepout_cloud"
+        output="screen">
+    <rosparam command="load" file="$(arg config)"/>
+  </node>
+
+  <node pkg="fire_perception"
+        type="victim_color_detector.py"
+        name="victim_color_detector"
+        output="screen">
+    <rosparam command="load" file="$(arg victim_config)"/>
+  </node>
+
+  <node pkg="fire_perception"
+        type="victim_pointcloud_localizer.py"
+        name="victim_pointcloud_localizer"
+        output="screen">
+    <rosparam command="load" file="$(arg victim_config)"/>
+  </node>
+
+  <node pkg="fire_perception"
+        type="victim_mission_manager.py"
+        name="victim_mission_manager"
+        output="screen">
+    <rosparam command="load" file="$(arg victim_config)"/>
+  </node>
+
+  <node pkg="fire_perception"
+        type="experiment_data_logger.py"
+        name="experiment_data_logger"
+        output="screen">
+    <rosparam command="load" file="$(arg victim_config)"/>
+  </node>
+</launch>

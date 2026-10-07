@@ -1,0 +1,21 @@
+<launch>
+  <!-- FAR retains its normal configuration and RViz.  The simple scene's
+       scale-1 robot is about 1.6 m wide; 2.0 m leaves planning clearance
+       without treating the chassis as the obsolete 5.6 m scale-2 body. -->
+  <include file="$(find far_planner)/launch/far_planner.launch">
+    <arg name="terrain_cloud_topic" value="/terrain_map_ext_with_fire" />
+  </include>
+
+  <param name="/far_planner/robot_dim" type="double" value="3.40" />
+  <param name="/far_planner/local_planner_range" type="double" value="12.0" />
+  <param name="/far_planner/terrain_range" type="double" value="30.0" />
+  <!-- local_planner_range is intentionally long, but a 12 m projected
+       waypoint must never cut through a wall.  Validate the whole corridor
+       using the scale-1 robot radius before handing it to the local planner. -->
+  <param name="/far_planner/validate_waypoint_corridor" type="bool" value="true" />
+  <!-- A visibility-graph vertex lies on the wall corner. The local planner
+       smooths its short segments, so the footprint radius alone still makes
+       a shallow wall-facing arc. Include a steering envelope so the handoff
+       moves laterally and the turn starts before the chassis reaches it. -->
+  <param name="/far_planner/waypoint_clearance" type="double" value="2.50" />
+</launch>

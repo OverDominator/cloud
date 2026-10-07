@@ -1,0 +1,8 @@
+<launch>
+  <arg name="log_directory" />
+  <arg name="victim_config" default="$(find fire_perception)/config/victim_color_detector.yaml" />
+  <include file="$(find fire_perception)/launch/fire_color_detector.launch">
+    <arg name="victim_config" value="$(arg victim_config)" />
+  </include>
+  <param name="/experiment_data_logger/experiment_output_directory" value="$(arg log_directory)" />
+</launch>

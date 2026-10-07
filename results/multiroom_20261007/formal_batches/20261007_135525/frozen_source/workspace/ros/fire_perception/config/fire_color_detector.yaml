@@ -1,0 +1,64 @@
+image_topic: /thermal/image_raw
+detected_topic: /fire_detection/detected
+center_topic: /fire_detection/center_pixel
+area_topic: /fire_detection/area_pixels
+debug_image_topic: /fire_detection/debug_image
+mask_topic: /fire_detection/mask
+roi_topic: /fire_detection/roi
+
+# OpenCV HSV ranges. Red wraps around the hue scale, so two ranges are used.
+red_low_1: [0, 100, 70]
+red_high_1: [12, 255, 255]
+red_low_2: [168, 100, 70]
+red_high_2: [179, 255, 255]
+
+min_area_pixels: 120.0
+morphology_kernel: 5
+morphology_iterations: 1
+publish_mask: true
+
+# Camera/LiDAR fusion. Unity Camera.fieldOfView is the vertical field of view.
+pointcloud_topic: /registered_scan
+camera_frame: thermal_camera_link
+output_frame: map
+image_width: 320
+image_height: 180
+vertical_fov_degrees: 60.0
+roi_margin_pixels: 5
+roi_timeout: 0.15
+min_range: 0.4
+max_range: 30.0
+front_surface_depth_band: 0.8
+marker_scale: 0.6
+
+# Persistent circular exclusion zones around localized fire sources.
+keepout_radius: 2.0
+keepout_point_spacing: 0.25
+keepout_height_levels: [0.15, 0.55, 0.95]
+keepout_publish_rate: 5.0
+keepout_merge_distance: 1.0
+keepout_update_alpha: 0.2
+# Two simulated sources in simple_v4; localization safeguards still apply.
+max_keepout_zones: 2
+# In FireRescue_Simplified, Unity owns each randomized fire transform. Use
+# this known simulation truth for collision avoidance; HSV/point-cloud fusion
+# is logged as a detection/association experiment and cannot add false zones.
+require_simulated_fire_truth: true
+min_fire_lidar_points: 4
+min_fire_height_above_ground: 0.35
+keepout_intensity: 1.0
+keepout_vehicle_height: 0.75
+merged_terrain_topic: /terrain_map_ext_with_fire
+added_obstacles_topic: /added_obstacles
+
+# A first trace-back is remembered as a soft routing failure. Only a repeated
+# failure at the same physical corner becomes a small hard obstacle in FAR's
+# terrain input, preventing one noisy recovery from closing a valid corridor.
+failed_pocket_topic: /local_recovery/failed_pocket
+failed_pocket_radius: 0.9
+failed_pocket_point_spacing: 0.3
+failed_pocket_merge_distance: 1.5
+failed_pocket_confirmations: 2
+failed_pocket_max_zones: 30
+failed_pocket_lifetime: 1800.0
+failed_pocket_min_robot_distance: 0.45

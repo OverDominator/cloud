@@ -1,0 +1,10 @@
+{
+  "run": "20261007_193332_no_call",
+  "pair_id": 34,
+  "variant": "no_call",
+  "seed": 27034,
+  "reason": "User requested exclusion and retry, suspecting startup abnormality; infrastructure cause NOT established.",
+  "original_outcome": "600-second timeout, 0 of 4 rescued",
+  "evidence": "Images, scans and odometry received; about 9 m movement; processes alive. Do not describe as proven startup failure.",
+  "reporting": "Retain original outcome and disclose this post-hoc exclusion and replacement in analysis; provide inclusive sensitivity results."
+}

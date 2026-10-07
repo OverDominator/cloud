@@ -8,6 +8,18 @@ This is a **public research release candidate**, not a verified standalone distr
 
 ## Demonstration video
 
+### Furnished multi-room update
+
+[New real-time video](media/multiroom_rescue_demo_realtime.mp4) · [1.5x presentation video](media/multiroom_rescue_demo_presentation.mp4)
+
+The furnished house demonstration confirms all four simulated victims in 224.096 s over 175.400 m with zero logged collisions. It is not a formal trial. Observer views are not perception inputs; the sensor panel is class-coded pseudo-thermal imagery, not radiometric thermal sensing.
+
+The separate 50-pair experiment has 49/50 successes with full guidance and 44/50 without call guidance. Original valid timeouts are retained. See [protocol, exclusions, results and reproducibility limits](docs/multiroom_results_20261007.md). The historical release below is preserved; the new results do not retroactively describe its code version.
+
+![Multi-room task sequence](results/multiroom_20261007/task_sequence.png)
+
+### Earlier Easy scene demonstration
+
 [Download the full Easy scene demonstration](media/fire-rescue-demo-v0.1.0.mp4). The repository is public; if GitHub cannot preview this file, use its download option.
 
 The video shows the Unity observer overview, the robot RGB image and the ROS/RViz planning view from the same run. It preserves the full recording at original speed, with explanatory labels and an end-of-video result caption; no narration or audio track is included. The observer view is not robot perception, and the RGB image is not physical thermal imaging.

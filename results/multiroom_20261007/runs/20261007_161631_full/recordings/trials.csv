@@ -1,0 +1,2 @@
+trial_id,map_name,start_time,end_time,duration_s,path_length_m,total_victims,rescued_victims,remaining_victims,mission_success,recovery_attempts,collision_count,min_fire_distance_m,final_status,stationary_time_s,recovery_time_s,recovery_transitions
+20261007_161648,house_expanded_pilot,2026-10-07T16:16:48,2026-10-07T16:26:49,600.734,26.066,4,1,3,False,0,0,7.553,experiment timeout (timeout),0.945,0.000,0
