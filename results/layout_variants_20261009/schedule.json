@@ -1,0 +1,322 @@
+[
+  {
+    "layout": "offset_doors",
+    "pair_id": 101,
+    "seed": 28001,
+    "variant": "full",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "offset_doors",
+    "pair_id": 101,
+    "seed": 28001,
+    "variant": "no_call",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "offset_doors",
+    "pair_id": 102,
+    "seed": 28002,
+    "variant": "no_call",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "offset_doors",
+    "pair_id": 102,
+    "seed": 28002,
+    "variant": "full",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "offset_doors",
+    "pair_id": 103,
+    "seed": 28003,
+    "variant": "full",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "offset_doors",
+    "pair_id": 103,
+    "seed": 28003,
+    "variant": "no_call",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "offset_doors",
+    "pair_id": 104,
+    "seed": 28004,
+    "variant": "no_call",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "offset_doors",
+    "pair_id": 104,
+    "seed": 28004,
+    "variant": "full",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "offset_doors",
+    "pair_id": 105,
+    "seed": 28005,
+    "variant": "full",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "offset_doors",
+    "pair_id": 105,
+    "seed": 28005,
+    "variant": "no_call",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "offset_doors",
+    "pair_id": 106,
+    "seed": 28006,
+    "variant": "no_call",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "offset_doors",
+    "pair_id": 106,
+    "seed": 28006,
+    "variant": "full",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "offset_doors",
+    "pair_id": 107,
+    "seed": 28007,
+    "variant": "full",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "offset_doors",
+    "pair_id": 107,
+    "seed": 28007,
+    "variant": "no_call",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "offset_doors",
+    "pair_id": 108,
+    "seed": 28008,
+    "variant": "no_call",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "offset_doors",
+    "pair_id": 108,
+    "seed": 28008,
+    "variant": "full",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "offset_doors",
+    "pair_id": 109,
+    "seed": 28009,
+    "variant": "full",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "offset_doors",
+    "pair_id": 109,
+    "seed": 28009,
+    "variant": "no_call",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "offset_doors",
+    "pair_id": 110,
+    "seed": 28010,
+    "variant": "no_call",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "offset_doors",
+    "pair_id": 110,
+    "seed": 28010,
+    "variant": "full",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "connected_rooms",
+    "pair_id": 111,
+    "seed": 28101,
+    "variant": "full",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "connected_rooms",
+    "pair_id": 111,
+    "seed": 28101,
+    "variant": "no_call",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "connected_rooms",
+    "pair_id": 112,
+    "seed": 28102,
+    "variant": "no_call",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "connected_rooms",
+    "pair_id": 112,
+    "seed": 28102,
+    "variant": "full",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "connected_rooms",
+    "pair_id": 113,
+    "seed": 28103,
+    "variant": "full",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "connected_rooms",
+    "pair_id": 113,
+    "seed": 28103,
+    "variant": "no_call",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "connected_rooms",
+    "pair_id": 114,
+    "seed": 28104,
+    "variant": "no_call",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "connected_rooms",
+    "pair_id": 114,
+    "seed": 28104,
+    "variant": "full",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "connected_rooms",
+    "pair_id": 115,
+    "seed": 28105,
+    "variant": "full",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "connected_rooms",
+    "pair_id": 115,
+    "seed": 28105,
+    "variant": "no_call",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "connected_rooms",
+    "pair_id": 116,
+    "seed": 28106,
+    "variant": "no_call",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "connected_rooms",
+    "pair_id": 116,
+    "seed": 28106,
+    "variant": "full",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "connected_rooms",
+    "pair_id": 117,
+    "seed": 28107,
+    "variant": "full",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "connected_rooms",
+    "pair_id": 117,
+    "seed": 28107,
+    "variant": "no_call",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "connected_rooms",
+    "pair_id": 118,
+    "seed": 28108,
+    "variant": "no_call",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "connected_rooms",
+    "pair_id": 118,
+    "seed": 28108,
+    "variant": "full",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "connected_rooms",
+    "pair_id": 119,
+    "seed": 28109,
+    "variant": "full",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "connected_rooms",
+    "pair_id": 119,
+    "seed": 28109,
+    "variant": "no_call",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "connected_rooms",
+    "pair_id": 120,
+    "seed": 28110,
+    "variant": "no_call",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  },
+  {
+    "layout": "connected_rooms",
+    "pair_id": 120,
+    "seed": 28110,
+    "variant": "full",
+    "duration_s": 600,
+    "phase": "formal_pending_validation"
+  }
+]

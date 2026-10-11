@@ -1,0 +1,11 @@
+正式40轮补充实验核对结果
+
+仅纳入预定正式轮；两次诊断复现不纳入正文统计。38成功、2超时、0碰撞。
+
+connected_rooms: {"full": {"n": 10, "successes": 10, "paired_success_mean_duration_s": 209.4364, "paired_success_mean_path_m": 162.8426}, "no_call": {"n": 10, "successes": 10, "paired_success_mean_duration_s": 232.9879, "paired_success_mean_path_m": 185.5414}, "paired_success_n": 10, "mean_paired_time_saving_s": 23.551499999999997, "mean_paired_path_saving_m": 22.698800000000002}
+
+offset_doors: {"full": {"n": 10, "successes": 9, "paired_success_mean_duration_s": 256.35333333333335, "paired_success_mean_path_m": 169.49733333333333}, "no_call": {"n": 10, "successes": 9, "paired_success_mean_duration_s": 283.47433333333333, "paired_success_mean_path_m": 201.81444444444443}, "paired_success_n": 9, "mean_paired_time_saving_s": 27.12099999999999, "mean_paired_path_saving_m": 32.31711111111111}
+
+效率仅在双方成功的配对中比较：连通房间10对、错位门9对。两轮正式超时保留在成功率分母中，不以重跑替换。
+
+统计依据原始trials.csv，已逐轮核对终局日志、救援人数及碰撞记录。

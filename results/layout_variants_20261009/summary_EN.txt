@@ -1,0 +1,11 @@
+Reconciled summary of 40 formal supplementary trials
+
+Only scheduled formal trials are included; diagnostic repeats are excluded. 38 successes, 2 timeouts, and 0 collisions.
+
+connected_rooms: {"full": {"n": 10, "successes": 10, "paired_success_mean_duration_s": 209.4364, "paired_success_mean_path_m": 162.8426}, "no_call": {"n": 10, "successes": 10, "paired_success_mean_duration_s": 232.9879, "paired_success_mean_path_m": 185.5414}, "paired_success_n": 10, "mean_paired_time_saving_s": 23.551499999999997, "mean_paired_path_saving_m": 22.698800000000002}
+
+offset_doors: {"full": {"n": 10, "successes": 9, "paired_success_mean_duration_s": 256.35333333333335, "paired_success_mean_path_m": 169.49733333333333}, "no_call": {"n": 10, "successes": 9, "paired_success_mean_duration_s": 283.47433333333333, "paired_success_mean_path_m": 201.81444444444443}, "paired_success_n": 9, "mean_paired_time_saving_s": 27.12099999999999, "mean_paired_path_saving_m": 32.31711111111111}
+
+Efficiency is compared only within jointly successful pairs: 10 connected-room pairs and 9 offset-door pairs. Both formal timeouts remain in success-rate denominators and are not replaced by reruns.
+
+Statistics use original trials.csv records, reconciled per trial against terminal logs, rescue counts and collision counts.
